@@ -1,27 +1,38 @@
 import tkinter as tk
-from tkinter import simpledialog, messagebox
-import json
+from tkinter import messagebox
+from threading import Thread
+import subprocess
+import sys
+import os
 
-def get_config():
-    root = tk.Tk()
-    root.withdraw()  # Hide the main window
+def run_scraper(url_template):
+    try:
+        subprocess.run(
+            [sys.executable, "-m", "pytest", "scraper.py"],
+            check=True,
+            env={**os.environ, "URL_TEMPLATE": url_template}
+        )
+    except subprocess.CalledProcessError as e:
+        messagebox.showerror("Error", f"Scraper failed.\n{e}")
 
-    base_url = simpledialog.askstring("Base URL", "Enter the base URL:")
-    sleep_time = simpledialog.askfloat("Sleep Time", "Enter sleep time in seconds:", minvalue=0.1)
+def on_start():
+    url_template = url_entry.get().strip()
+    thread = Thread(target=run_scraper, args=(url_template,))
+    thread.start()
 
-    if not base_url or sleep_time is None:
-        messagebox.showerror("Input Error", "Both fields are required.")
-        return
+# --- GUI ---
+root = tk.Tk()
+root.title("Amazon Scraper")
+root.geometry("500x220")
 
-    config = {
-        "base_url": base_url,
-        "sleep_time": sleep_time
-    }
+label = tk.Label(root, text="Enter Amazon URL Template (with *):", font=("Arial", 12))
+label.pack(pady=10)
 
-    with open("config.json", "w") as f:
-        json.dump(config, f)
+url_entry = tk.Entry(root, width=70)
+url_entry.insert(0, "https://www.amazon.com/Best-Sellers-Clothing-Shoes-Jewelry/zgbs/fashion/ref=zg_bs_pg_*_fashion?_encoding=UTF8&pg=*")
+url_entry.pack(pady=5)
 
-    messagebox.showinfo("Saved", "Configuration saved successfully!")
+start_button = tk.Button(root, text="Start Scraper", command=on_start, font=("Arial", 12))
+start_button.pack(pady=10)
 
-if __name__ == "__main__":
-    get_config()
+root.mainloop()
