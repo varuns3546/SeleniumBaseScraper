@@ -3,19 +3,19 @@ from seleniumbase import BaseCase
 
 class Scraper(BaseCase):
     def test_get_links(self):
-        SLEEP_TIME = 1.5
         page_number = 1
 
-        template = os.environ.get("URL_TEMPLATE")
-        if not template:
+        url_template = os.environ.get("URL_TEMPLATE")
+        sleep_time = float(os.environ.get("SLEEP_TIME"))
+        if not url_template:
             print("Invalid or missing URL template.")
             return
 
         links = []
-        url = template.replace("*", str(page_number))
+        url = url_template.replace("*", str(page_number))
         self.open(url)
         while True:
-            self.sleep(SLEEP_TIME)
+            self.sleep(sleep_time)
             elements = self.find_elements('a.a-link-normal.aok-block')
             if not elements:
                 break
@@ -36,8 +36,8 @@ class Scraper(BaseCase):
             else:
                 try:
                     page_number += 1
-                    self.open(template.format(page_number, page_number))
-                    self.sleep(SLEEP_TIME)
+                    self.open(url_template.format(page_number, page_number))
+                    self.sleep(sleep_time)
                 except Exception as e:
                     print(f"No more pages or failed to open next page: {e}")
                     break
