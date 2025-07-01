@@ -1,0 +1,23 @@
+import sqlite3
+
+def read_database():
+    conn = sqlite3.connect('queries.db')
+    cursor = conn.cursor()
+
+    print("=== queries ===")
+    cursor.execute("SELECT * FROM get_url_list_queries")
+    queries = cursor.fetchall()
+    for row in queries:
+        print(row)
+
+    print("\n=== query_urls ===")
+    cursor.execute("SELECT * FROM query_urls")
+    query_urls = cursor.fetchall()
+    for row in query_urls:
+        print(row)
+
+    conn.close()
+
+if __name__ == "__main__":
+    read_database()
+
