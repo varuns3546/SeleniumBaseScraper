@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title id="head-title">report.html</title>
+      <link href="assets\style.css" rel="stylesheet" type="text/css"/>
+  </head><link rel="shortcut icon" href="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAABHCAYAAABVsFofAAAAAXNSR0IArs4c6QAACThJREFUeAHlnH9sE+cZx587O3FIUuIxnARKISQRtImTdgy1gbIQIAKmAv2DsaWiW9UJbaumSZ20SRPSpk3b+GPqH/zVaVKkaVLpAqhSoRSxKgRXJClh6caPJKvWNE1oSAxetSS1k3Ni+3bf13nds3P2nX//2CvZ53vv/fE8Hz/v8/64e0+w/OqPMmUotFRuYjU9JgePRqudFWZpjmZY8hsPJ4xmSzqdOekSdAoAkNVkpQq5gqbu2ljq/hGdTBGXrTYbWYNZ6Zh9E3FY6QaVFjgbyiqooawmBOS+i2hY+Xy37DJT+73Gv0eoHzx947Bv/Hr9dE3kRedQLU3frWXR4+c6FFBBWBzUiGecJj2zkdmSPk8pHA5FeLCeJgdKQ0B2W6eotfF+wsJW28cIHxZe6CYOi4NqbFxPDVVTrOml0ppSBmd/5ZPEoWya+Zheq3w/KSCxSIZgLYMavXiESobtrOntb7JSqiwpaTjwKXCwIz02CkHZkqiVxN83BEGdDlnTTE8HcUt67+HtWIx1ryUFB9biuVtPcLCdj3ZSa8JQdOXUTcCtydk0RtyS9u8lSgZQQnDgW3aUPsms5fD8ZYrmYHU1ikwQv+FElsB8U7U9aEn3z5ykY3sq6IP52wk5bHFF6ToRANPo3kn952z0WnEn/bJGu+fRKSbtl2FJ646fYnJCXsgdb4gLDgdj6rtP/278DbVaE/Ut8YqZWHoA2tN5gkbvjbE/NF5AhuGowZzf8mZi0urkSkGr0qxhx8nTCQEyBCcTYIJapQsPUSKAdOFkDozmn57SyHgBxYRTSGA45XgAxYSD7nrIUUrp8jFc4C+PgS9/pvEXAEEv6BcrRIWDAd7INRsb3MUqIKXXMsOGifzEq6eYftAzWtCEgykBRr4Y4OV6dx1NMb14dPPSI0NsPgj3oRU04WCuNK5MCXJ1gKelSCJxev5nBRzenH538Hqv32yWEqk0n/JsPnKRJodL2fpTpNxhcGBeWHbYWP6Ajh2d37X00rO9vrXW3shMhXQeq3mFwcHqHSj+5MgnTH/LI9524cUmu/dbz1whS9Fo2qGkbwwYU/Ro1hOCo7aaVvsXocJEWrIWbxAO+l952rywfcuFQFHRf0IXC+RHNOtRwbGS+2EpNdc+0FRZJH9Nya41z/t/0DIqbd3UrZkojyO1rCcEJ9RDdUzHVNFctNRi+ea69vmXW6/411TciJk47otZaleKnLCeGeUmAO6S8MDgYFwzNWSjF/fd4fG6x1UViwfll5rqpcPb3pVLiid1MxhJkD02TDrrvi7GATwQGBzcVwK13XY3izT6ZZJ9ay11xc8Ffrhdkr6+5ZLij4J33owWkGPp1ilLrOAAHggMDkwJkWpHHI/cohCot3xjzSH/iZaPFusec8STN5fSRjYtEb3U3MMyat6s7YjjEd5sWWoRD9e0SMd3XvKtqbgVT95cSVtSO8R4gIsCJ3YvFa/QJloqsdgCh4TvNVX79j7uCJhM48bLyLLTUQQt2TzEem1wCfVWxhUwllIkX7Wp2drm//Eut9RcdylQXKw/Fck+G1L7HdFoF24MycpUZtFrt+y1HfK/vH3QV/VVnalI9umo/Y55pTrpiTGvCuzyv9AgSU7fFdPloQ1Fc1/Y01NT6kpNW7PSEpH5o2r5oPj95nJf61aHv8js1EqXK3EZhcOVxlTEtO0rbfKPnnVKTZu7Q0sj2W9VXER2zFizCqt1+cRk8j5l2ldF3qc3OgKXhspJ8KzVSpetuKxYTqSyytJIm/f4NvdHT/hzQh4uX1YtB0IEyOx8X5y4fVbuP0ACFys3jlmFc1P4fPAcDZS7Zc+B3MARLkVW4LgFc+/rcp9/jO7tDhcnt84yCscvmMffkj/5sIduHs21JqT1t2QEToCKZvqEzwbfosEaSVg4qiVILsaJnwkTVNNA9NuudWmRb1hYuPUL4YLzDF1vl2ihPi2VpLDQf/61nfEAl7RZzoJQfON1oVf6WJ5oS6HsGS1KxHO76+0ueuNqc0oqDpBp/KLofPendKYln8EARsosx09F7pvi1OBZeaBakheeSwnpLBQyc7WDGr7tovOK0bARabJ+Z0YQrv5e6Bn4i+xoU/zK41nQKSVV4sl47LHA3goEZjmTnhlqrJynO2NVSlTsWzMs1/KXV1h1609Cr3tEHtunjs/X358qT8LXN87TsLKXAmEZziztqPRQvwNw9IPiVyavifeGLwT+sXWRpKf0c+RHCmnMTqu3u2jSFbSc0ETPSNNS/Io0IHx+4+fiO+7zylxoUZBq8kNtfSnVXThPHYKj12u5ZVP3HwRH35+pp8Uje/LWr3DFI4/Sp3YqV1wLXAwPITiI0LKeRdEy9KYwfvZnYlf7BE0VhG/hyvMjHHGJsmorK9uS1Pu2wrrySMfsEKf+9rb8YZ1E0nd4QYV4jHTEXMcwywG12aoRmltVRc90/Ze65L4DCph6nrgQj/A11SV2prfaaqBrGBxEcN+DwdD/Q4CemCFo7fBbAQdAsAXH3jZPH5x6taD5QD+mp6KvVtCEw5sXzA1mV4ghmhNW66oJBwlgZmVNymOAdzrYFkF1pnz/zTbQKhvVHt07GnMnX1Q4AIAtgChgWikIBRZCMAoGusaEgwQA1LDHRf86fRKneR/QbW9Q5k/YQawXdOGggEJx0HDA9Rtrabi8P2ywFw2SIThw0CgQBaOCfGtikPfaic64wACYIThIqAaUTz6I+5idygKWUYuBvggm8+5Dv2a/DHzNLXnJW+6iuq0Bmrr4PDld8+xhHwNZs5IEwxB39yusU3nHdZMgfzzBsOXwQmFBvBezTnfk7EARzR/y6XXXXC+to5DM+3PwvG7Fgwa28xbP0n1NebdEtgOsBVMCjHwxT9SaFhiVMSk4qARPXWJTO7YGYI8WdsDh0bFMB0DBmgxG9ZgrJfoWArXcScNBYQCEpy/ZCz+UrY/YAZcpS+KWghuTWKxK1lpSDkddIDazYc8WtyQ815tqUNxKsOYLKLAULNRhPQo+MVUhJZYTKYzakvAAOAeFdNhfgIBHWo00P9YVL791iS+jcCtZrdwUAJRk/AoTJspXWuCo61KDQjw2oCBgOwE+egH3kfj7umAhCOmwEi050g4nslK+I4W/5CzyeuQ5f3kZ4tNlIZF18vP/AXYR+dvV3FCCAAAAAElFTkSuQmCC">
+  <body>
+    
+<script src="https://code.highcharts.com/10.3.3/highcharts.js"></script>
+<script src="https://code.highcharts.com/10.3.3/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/10.3.3/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/10.3.3/modules/accessibility.js"></script>
+
+<style>
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 320px;
+    max-width: 660px;
+    margin: 1em auto;
+}
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #EBEBEB;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+.highcharts-data-table td, .highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+</style>
+
+<figure class="highcharts-figure">
+    <div id="chartcontainer_2_2"></div>
+    <p class="highcharts-description"></p>
+</figure>
+
+<script>
+// Build the chart
+Highcharts.chart('chartcontainer_2_2', {
+credits: {
+    enabled: false
+},
+title: {
+    text: 'SeleniumBase Dashboard ⚪'
+},
+subtitle: {
+    text: ''
+},
+xAxis: {
+    labels: {
+        useHTML: true,
+        style: {
+            fontSize: '14px',
+        },
+    },
+categories: ['Passed','Untested','Skipped','Failed',], crosshair: false},
+yAxis: {
+
+    title: {
+        text: 'Values',
+        style: {
+            fontSize: '14px'
+        }
+    },
+    labels: {
+        useHTML: true,
+        style: {
+            fontSize: '14px'
+        }
+    }
+},
+chart: {
+    renderTo: 'statusChart',
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false,
+    type: 'pie'
+},
+
+tooltip: {
+    enabled: true,
+    useHTML: true,
+    style: {
+        padding: '6px',
+        fontSize: '14px'
+    },
+    backgroundColor: {
+        linearGradient: {
+            x1: 0,
+            y1: 0,
+            x2: 0,
+            y2: 1
+        },
+        stops: [
+            [0, 'rgba(255, 255, 255, 0.78)'],
+            [0.5, 'rgba(235, 235, 235, 0.76)'],
+            [1, 'rgba(244, 252, 255, 0.74)']
+        ]
+    },
+    hideDelay: 40,
+    pointFormat: '<b>{point.y}</b><br /><b>{point.percentage:.1f}%</b>'
+},
+
+accessibility: {
+    point: {
+        valueSuffix: '%'
+    }
+},
+plotOptions: {
+    series: {
+        states: {
+            inactive: {
+                opacity: 0.85
+            }
+        }
+    },
+    pie: {
+        size: "95%",
+        allowPointSelect: true,
+        animation: false,
+        cursor: 'pointer',
+        dataLabels: {
+            enabled: true,
+            formatter: function() {
+              if (this.y > 0) {
+                return this.point.name + ': ' + this.point.y
+              }
+            }
+        },
+        states: {
+            hover: {
+                enabled: true
+            }
+        },
+        showInLegend: true
+    }
+},
+
+series: [{
+name: 'Series 1',
+colorByPoint: true,
+data: [
+
+{
+name: 'Passed',
+y: 0,
+color: '#84d474'
+},
+
+{
+name: 'Untested',
+y: 0,
+color: '#eaeaea'
+},
+
+{
+name: 'Skipped',
+y: 0,
+color: '#efd8b4'
+},
+
+{
+name: 'Failed',
+y: 1,
+color: '#f17476'
+},
+
+            ]
+                }]
+            });
+            </script>
+            
+    <p>Report generated on 02-Jul-2025 at 14:36:48 by <a href="https://github.com/seleniumbase/SeleniumBase">SeleniumBase</a> and <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a>
+        v4.0.2</p>
+    <div id="environment-header">
+      <h2>Environment</h2>
+    </div>
+    <table id="environment"></table>
+    <!-- TEMPLATES -->
+      <template id="template_environment_row">
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
+    <template id="template_results-table__body--empty">
+      <tbody class="results-table-row">
+        <tr id="not-found-message">
+          <td colspan="4">No results found. Check the filters.</th>
+        </tr>
+    </template>
+    <template id="template_results-table__tbody">
+      <tbody class="results-table-row">
+        <tr class="collapsible">
+        </tr>
+        <tr class="extras-row">
+          <td class="extra" colspan="4">
+            <div class="extraHTML"></div>
+            <div class="media">
+              <div class="media-container">
+                  
+                  <div class="media-container__viewport">
+                    <img src="" />
+                    <video controls>
+                      <source src="" type="video/mp4">
+                    </video>
+                  </div>
+                  
+                </div>
+                <div class="media__name"></div>
+                <div class="media__counter"></div>
+            </div>
+            <div class="logwrapper">
+              <div class="logexpander"></div>
+              <div class="log"></div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </template>
+    <!-- END TEMPLATES -->
+    <div class="summary">
+      <div class="summary__data">
+        <h2>Summary</h2>
+        <div class="additional-summary prefix">
+        </div>
+        <p class="run-count">1 test ran in 28.37 seconds.</p>
+        <p class="filter">(Un)check the boxes to filter the results.</p>
+        <div class="summary__reload">
+          <div class="summary__reload__button hidden" onclick="location.reload()">
+            <div>There are still tests running. <br />Reload this page to ge the latest results!</div>
+          </div>
+        </div>
+        <div class="summary__spacer"></div>
+        <div class="controls">
+          <div class="filters">
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="failed" />
+            <span class="failed">1 Failed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="passed" disabled/>
+            <span class="passed">0 Passed,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="skipped" disabled/>
+            <span class="skipped">0 Skipped,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xfailed" disabled/>
+            <span class="xfailed">0 Expected failures,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="xpassed" disabled/>
+            <span class="xpassed">0 Unexpected passes,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="error" disabled/>
+            <span class="error">0 Errors,</span>
+            <input checked="true" class="filter" name="filter_checkbox" type="checkbox" data-test-result="rerun" disabled/>
+            <span class="rerun">0 Reruns</span>
+          </div>
+          <div class="collapse">
+            <button id="show_all_details">Show all details</button>&nbsp;/&nbsp;<button id="hide_all_details">Hide all details</button>
+          </div>
+        </div>
+      </div>
+      <div class="additional-summary summary">
+      </div>
+      <div class="additional-summary postfix">
+      </div>
+    </div>
+    <table id="results-table">
+      <thead id="results-table-head">
+        <tr>
+          <th class="sortable" data-column-type="result">Result</th>
+          <th class="sortable" data-column-type="testId">Test</th>
+          <th class="sortable" data-column-type="duration">Duration</th>
+          <th>Links</th>
+        </tr>
+      </thead>
+    </table>
+  </body>
+  <footer>
+    <div id="data-container" data-jsonblob="{&#34;environment&#34;: {&#34;Python&#34;: &#34;3.11.9&#34;, &#34;Platform&#34;: &#34;Windows-10-10.0.26100-SP0&#34;, &#34;Packages&#34;: {&#34;pytest&#34;: &#34;8.4.0&#34;, &#34;pluggy&#34;: &#34;1.6.0&#34;}, &#34;Plugins&#34;: {&#34;html&#34;: &#34;4.0.2&#34;, &#34;metadata&#34;: &#34;3.1.1&#34;, &#34;ordering&#34;: &#34;0.6&#34;, &#34;rerunfailures&#34;: &#34;15.1&#34;, &#34;xdist&#34;: &#34;3.7.0&#34;, &#34;seleniumbase&#34;: &#34;4.39.5&#34;}}, &#34;tests&#34;: {&#34;test_scraper.py::Scraper::test_get_links&#34;: [{&#34;extras&#34;: [{&#34;name&#34;: &#34;URL&#34;, &#34;format&#34;: &#34;url&#34;, &#34;format_type&#34;: &#34;url&#34;, &#34;content&#34;: &#34;https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden/ref=zg_bs_pg_3_home-garden?_encoding=UTF8&amp;pg=3&#34;, &#34;mime_type&#34;: null, &#34;extension&#34;: null}, {&#34;name&#34;: &#34;Screenshot&#34;, &#34;format&#34;: &#34;image&#34;, &#34;format_type&#34;: &#34;image&#34;, &#34;content&#34;: &#34;assets\\test_scraper.py__Scraper__test_get_links_1_0.png&#34;, &#34;mime_type&#34;: &#34;image/png&#34;, &#34;extension&#34;: &#34;png&#34;}], &#34;result&#34;: &#34;Failed&#34;, &#34;testId&#34;: &#34;test_scraper.py::Scraper::test_get_links&#34;, &#34;duration&#34;: &#34;28.03&#34;, &#34;resultsTableRow&#34;: [&#34;&lt;td class=\&#34;col-result\&#34;&gt;Failed&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-testId\&#34;&gt;test_scraper.py::Scraper::test_get_links&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-duration\&#34;&gt;28.03&lt;/td&gt;&#34;, &#34;&lt;td class=\&#34;col-links\&#34;&gt;&lt;a target=\&#34;_blank\&#34; href=\&#34;https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden/ref=zg_bs_pg_3_home-garden?_encoding=UTF8&amp;pg=3\&#34; class=\&#34;col-links__extra url\&#34;&gt;URL&lt;/a&gt;&lt;/td&gt;&#34;], &#34;log&#34;: &#34;self = &amp;lt;test_scraper.Scraper testMethod=test_get_links&amp;gt;\n\n    def test_get_links(self):\n        page_number = 1\n        #query_id = int(os.environ.get(\&#34;QUERY_ID\&#34;))\n        with open(\&#34;config.json\&#34;, \&#34;r\&#34;) as f:\n            config = json.load(f)\n    \n        query_id = int(config.get(\&#34;QUERY_ID\&#34;))\n        conn = sqlite3.connect(&#39;data.db&#39;)\n        cursor = conn.cursor()\n        cursor.execute(\&#34;SELECT query_type_id, title, parameters_json FROM queries WHERE id = ?\&#34;, (query_id,))\n        query_data = cursor.fetchone()\n        conn.close()\n    \n        query_type_id = query_data[0]\n        title = query_data[1]\n        parameters_json = query_data[2]\n    \n        params = json.loads(parameters_json)\n        pagination = params.get(\&#34;pagination\&#34;, \&#34;url\&#34;)\n        sleep_time = float(params.get(\&#34;sleep_time\&#34;, 1))\n        url = params.get(\&#34;url\&#34;)\n        item_selector = params.get(\&#34;item_selector\&#34;)\n        pagination_button_selector = params.get(\&#34;pagination_button_selector\&#34;)\n    \n        items = []\n        if pagination ==\&#34;url\&#34;:\n            self.open(url.replace(\&#34;*\&#34;, str(page_number)))\n        else:\n            self.open(url)\n        while True:\n            self.sleep(sleep_time)\n            elements = self.find_elements(item_selector)\n            if not elements:\n                break\n    \n            last_new_element = None\n            for i, e in enumerate(elements, start=1):\n                href = e.get_attribute(\&#34;href\&#34;)\n                title = e.text\n                if href and all(href != item[&#39;url&#39;] for item in items):\n                    items.append({\&#34;title\&#34;: title, \&#34;url\&#34;: href})\n                    last_new_element = e\n                print(f\&#34;{i}. {title}\&#34;)\n    \n            if last_new_element:\n                try:\n                    self.execute_script(\&#34;arguments[0].scrollIntoView(true);\&#34;, last_new_element)\n                except Exception as e:\n                    print(f\&#34;Scroll error: {e}\&#34;)\n            else:\n                try:\n                    page_number += 1\n                    if pagination ==\&#34;url\&#34;:\n                        self.open(url.replace(\&#34;*\&#34;, str(page_number)))\n                    elif pagination_button_selector:\n                        self.click(pagination_button_selector)\n                    else:\n                        self.open(url)\n                    self.sleep(sleep_time*2)\n                except Exception as e:\n                    print(f\&#34;No more pages or failed to open next page: {e}\&#34;)\n                    break\n    \n        print(f\&#34;{len(items)} links found\&#34;)\n&amp;gt;       self.save_data(query_id, items)\n\ntest_scraper.py:71: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = &amp;lt;test_scraper.Scraper testMethod=test_get_links&amp;gt;, query_id = 1\nitems = [{&#39;title&#39;: &#39;Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch ...wstate-3-Position-Compatible-Insulated/dp/B0CRMZHDG8/ref=zg_bs_g_home-garden_d_sccl_6/138-2985105-2165721?psc=1&#39;}, ...]\n\n    def save_data(self, query_id, items):\n        conn = sqlite3.connect(&#39;queries.db&#39;)\n        cursor = conn.cursor()\n    \n        for item in items:\n&amp;gt;           cursor.execute(&#39;&#39;&#39;\n                INSERT INTO items (query_id, title, url)\n                VALUES (?, ?, ?)\n            &#39;&#39;&#39;, (query_id, item[&#39;title&#39;], item[&#39;url&#39;]))\nE           sqlite3.OperationalError: table items has no column named url\n\ntest_scraper.py:78: OperationalError\n\n----------------------------- Captured stdout call -----------------------------\n1. Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch Deep Pockets, Twin, Navy Blue, Solid, Kids, Men &amp; Women Bedding\n2. TERRO Ant Killer Bait Stations T300B - Liquid Bait to Eliminate Ants - 12 Count Stations for Effective Indoor Ant Control\n3. Zevo Flying Insect Trap &amp; Cartridge - Plug in Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (1 Plug in Device &amp; 1 Cartridge)\n4. Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &amp; Teens - Deep Pockets, Easy Secure Fit, Soft and Wrinkle Free - Oeko-Tex - White\n5. Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Denim\n6. STANLEY Quencher H2.0 Tumbler with Handle and Straw 40 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel | Insulated Stainless Steel Cup | BPA-Free | Fuchsia\n7. Zevo Flying Insect Trap Refill - for The Zevo MAX &amp; Standard Indoor Fly Trap - Catch Gnats, House &amp; Fruit Flies - Easy to Use - Mess-Free Disposal (4 Refill Cartridges)\n8. Thermacell Mosquito Repeller Patio Shield; Includes 12-Hour Refill; 15 Foot Zone of Protection; Highly Effective Mosquito Repellent for Patio; Bug Spray Alternative; Scent Free\n9. Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black\n10. Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets, Waterproof Cute Lightweight Standard Size Bathroom Curtains - Clear\n11. upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack\n12. Utopia Bedding Queen Sheet Set \u2013 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases (Grey)\n13. JISULIFE Handheld Mini Fan, 3 IN 1 USB Rechargeable Portable Fan [12-19 Working Hours] with Power Bank, Flashlight, Pocket Design for Travel/Summer/Concerts/Lash, Gifts for Women (Pink)\n14. Chapin 20000 Made in USA 1 -Gallon Lawn and Garden Pump Pressured Sprayer, for Spraying Plants, Garden Watering, Weeds and Pests, Polypropylene, Translucent White\n15. Utopia Bedding Waterproof Mattress Protector Twin Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style with Stretchable Pockets (White)\n16. Amazon Echo Spot (newest model), Great for nightstands, offices and kitchens, Smart alarm clock with Alexa, Black\n17. Safer Home Indoor Plug-In Fly Trap - SH502 - Effective Fruit Fly Traps for Indoors, Gnat Traps for House Indoor, 400 Sq Ft Protection - Style: 1 Device + 2 Glue Cards\n18. Summit...responsible solutions 110-12 Mosquito Dunks, 6-Pack\n19. Flexzilla Garden Hose 5/8 in. x 50 ft., Lightweight All-Weather Water Hose, Durable and Flexible, Leak-Free Connections\n20. OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. PlayHot Portable Handheld Turbo Fan, 5 Gear Wind, Battery Operated, Up to 12 Working Hours, 3 IN 1 Hand Fan with Air Turbo Tech Cooling Fan for Outdoor Activities, Travel, Beach (Black)\n22. HTH 52037R Pool Care Shock Advanced, Swimming Pool Chemical - Cal Hypo Formula, Prevents Bacteria &amp; Algae, Restores Crystal Clear Water - Shock Treatment, 1lb (12 Pack)\n23. Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow\n24. Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers\n25. Amazon Basics Air Circulator Fan, Desk Fan for Bedroom, Home and Office, With 90-Degree Tilt Head, 3 Speed Settings, Lightweight (3 LBS), 35 Watts, Black, 11.1\&#34;W x 6.3\&#34;D x 10.9\&#34;H\n26. Zevo 2 Flying Insect Traps &amp; 4 Cartridges - Plug In Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (2 Plug In Devices &amp; 4 Cartridges)\n27. Terro Fruit Fly Traps for Indoors (4 Pack) + 180 Days of Lure Supply\n28. Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy Care -1 Fitted Sheet Only (Grey)\n29. Cutter Backyard Bug Control Spray Concentrate (2 Pack), Kills Mosquitoes, Fleas &amp; Listed Ants, 32 fl Ounce\n30. Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up to 16 Inches Deep, Machine Washable (White)\n1. Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch Deep Pockets, Twin, Navy Blue, Solid, Kids, Men &amp; Women Bedding\n2. TERRO Ant Killer Bait Stations T300B - Liquid Bait to Eliminate Ants - 12 Count Stations for Effective Indoor Ant Control\n3. Zevo Flying Insect Trap &amp; Cartridge - Plug in Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (1 Plug in Device &amp; 1 Cartridge)\n4. Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &amp; Teens - Deep Pockets, Easy Secure Fit, Soft and Wrinkle Free - Oeko-Tex - White\n5. Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Denim\n6. STANLEY Quencher H2.0 Tumbler with Handle and Straw 40 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel | Insulated Stainless Steel Cup | BPA-Free | Fuchsia\n7. Zevo Flying Insect Trap Refill - for The Zevo MAX &amp; Standard Indoor Fly Trap - Catch Gnats, House &amp; Fruit Flies - Easy to Use - Mess-Free Disposal (4 Refill Cartridges)\n8. Thermacell Mosquito Repeller Patio Shield; Includes 12-Hour Refill; 15 Foot Zone of Protection; Highly Effective Mosquito Repellent for Patio; Bug Spray Alternative; Scent Free\n9. Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black\n10. Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets, Waterproof Cute Lightweight Standard Size Bathroom Curtains - Clear\n11. upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack\n12. Utopia Bedding Queen Sheet Set \u2013 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases (Grey)\n13. JISULIFE Handheld Mini Fan, 3 IN 1 USB Rechargeable Portable Fan [12-19 Working Hours] with Power Bank, Flashlight, Pocket Design for Travel/Summer/Concerts/Lash, Gifts for Women (Pink)\n14. Chapin 20000 Made in USA 1 -Gallon Lawn and Garden Pump Pressured Sprayer, for Spraying Plants, Garden Watering, Weeds and Pests, Polypropylene, Translucent White\n15. Utopia Bedding Waterproof Mattress Protector Twin Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style with Stretchable Pockets (White)\n16. Amazon Echo Spot (newest model), Great for nightstands, offices and kitchens, Smart alarm clock with Alexa, Black\n17. Safer Home Indoor Plug-In Fly Trap - SH502 - Effective Fruit Fly Traps for Indoors, Gnat Traps for House Indoor, 400 Sq Ft Protection - Style: 1 Device + 2 Glue Cards\n18. Summit...responsible solutions 110-12 Mosquito Dunks, 6-Pack\n19. Flexzilla Garden Hose 5/8 in. x 50 ft., Lightweight All-Weather Water Hose, Durable and Flexible, Leak-Free Connections\n20. OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. PlayHot Portable Handheld Turbo Fan, 5 Gear Wind, Battery Operated, Up to 12 Working Hours, 3 IN 1 Hand Fan with Air Turbo Tech Cooling Fan for Outdoor Activities, Travel, Beach (Black)\n22. HTH 52037R Pool Care Shock Advanced, Swimming Pool Chemical - Cal Hypo Formula, Prevents Bacteria &amp; Algae, Restores Crystal Clear Water - Shock Treatment, 1lb (12 Pack)\n23. Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow\n24. Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers\n25. Amazon Basics Air Circulator Fan, Desk Fan for Bedroom, Home and Office, With 90-Degree Tilt Head, 3 Speed Settings, Lightweight (3 LBS), 35 Watts, Black, 11.1\&#34;W x 6.3\&#34;D x 10.9\&#34;H\n26. Zevo 2 Flying Insect Traps &amp; 4 Cartridges - Plug In Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (2 Plug In Devices &amp; 4 Cartridges)\n27. Terro Fruit Fly Traps for Indoors (4 Pack) + 180 Days of Lure Supply\n28. Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy Care -1 Fitted Sheet Only (Grey)\n29. Cutter Backyard Bug Control Spray Concentrate (2 Pack), Kills Mosquitoes, Fleas &amp; Listed Ants, 32 fl Ounce\n30. Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up to 16 Inches Deep, Machine Washable (White)\n31. American Flag | American Flags for Outside 3X5 |100% Made in USA Flag - Premium US Flag 3X5 Heavy Duty Outdoor with Embroidered Stars and Sewn Stripes.\n32. Dreo Tower Fan for Bedroom, 25ft/s Velocity Quiet Floor Fan, 90\u00b0 Oscillating Fans for Indoors with 4 Speeds, 4 Modes, 8H Timer, Standing Fans, Bladeless Fan, Black, Nomad One (DR-HTF007)\n33. Bonide Captain Jack&#39;s Neem Oil, 32 oz Ready-to-Use Spray, Multi-Purpose Fungicide, Insecticide and Miticide for Organic Gardening\n34. STANLEY Quencher H2.0 FlowState Stainless Steel\n35. ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner, Light-Weight &amp; Machine Washable - Standard Size 72x72, White\n36. Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with Envelope Closure, Gifts for Women Men, Silver Grey, 20x30 Inches\n37. EHZNZIE Clear Shower Curtain Liner Light Weight PEVA, Shower Liner 72x72 Inches, Waterproof, No Chemical Smell with 12 Rust Proof Metal Grommets for Bathroom Shower Curtain\n38. Thermacell E-Series Rechargeable Mosquito Repeller with 20\u2019 Mosquito Protection Zone; Bug Spray Alternative; Scent Free\n1. Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch Deep Pockets, Twin, Navy Blue, Solid, Kids, Men &amp; Women Bedding\n2. TERRO Ant Killer Bait Stations T300B - Liquid Bait to Eliminate Ants - 12 Count Stations for Effective Indoor Ant Control\n3. Zevo Flying Insect Trap &amp; Cartridge - Plug in Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (1 Plug in Device &amp; 1 Cartridge)\n4. Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &amp; Teens - Deep Pockets, Easy Secure Fit, Soft and Wrinkle Free - Oeko-Tex - White\n5. Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Denim\n6. STANLEY Quencher H2.0 Tumbler with Handle and Straw 40 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel | Insulated Stainless Steel Cup | BPA-Free | Fuchsia\n7. Zevo Flying Insect Trap Refill - for The Zevo MAX &amp; Standard Indoor Fly Trap - Catch Gnats, House &amp; Fruit Flies - Easy to Use - Mess-Free Disposal (4 Refill Cartridges)\n8. Thermacell Mosquito Repeller Patio Shield; Includes 12-Hour Refill; 15 Foot Zone of Protection; Highly Effective Mosquito Repellent for Patio; Bug Spray Alternative; Scent Free\n9. Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black\n10. Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets, Waterproof Cute Lightweight Standard Size Bathroom Curtains - Clear\n11. upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack\n12. Utopia Bedding Queen Sheet Set \u2013 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases (Grey)\n13. JISULIFE Handheld Mini Fan, 3 IN 1 USB Rechargeable Portable Fan [12-19 Working Hours] with Power Bank, Flashlight, Pocket Design for Travel/Summer/Concerts/Lash, Gifts for Women (Pink)\n14. Chapin 20000 Made in USA 1 -Gallon Lawn and Garden Pump Pressured Sprayer, for Spraying Plants, Garden Watering, Weeds and Pests, Polypropylene, Translucent White\n15. Utopia Bedding Waterproof Mattress Protector Twin Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style with Stretchable Pockets (White)\n16. Amazon Echo Spot (newest model), Great for nightstands, offices and kitchens, Smart alarm clock with Alexa, Black\n17. Safer Home Indoor Plug-In Fly Trap - SH502 - Effective Fruit Fly Traps for Indoors, Gnat Traps for House Indoor, 400 Sq Ft Protection - Style: 1 Device + 2 Glue Cards\n18. Summit...responsible solutions 110-12 Mosquito Dunks, 6-Pack\n19. Flexzilla Garden Hose 5/8 in. x 50 ft., Lightweight All-Weather Water Hose, Durable and Flexible, Leak-Free Connections\n20. OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. PlayHot Portable Handheld Turbo Fan, 5 Gear Wind, Battery Operated, Up to 12 Working Hours, 3 IN 1 Hand Fan with Air Turbo Tech Cooling Fan for Outdoor Activities, Travel, Beach (Black)\n22. HTH 52037R Pool Care Shock Advanced, Swimming Pool Chemical - Cal Hypo Formula, Prevents Bacteria &amp; Algae, Restores Crystal Clear Water - Shock Treatment, 1lb (12 Pack)\n23. Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow\n24. Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers\n25. Amazon Basics Air Circulator Fan, Desk Fan for Bedroom, Home and Office, With 90-Degree Tilt Head, 3 Speed Settings, Lightweight (3 LBS), 35 Watts, Black, 11.1\&#34;W x 6.3\&#34;D x 10.9\&#34;H\n26. Zevo 2 Flying Insect Traps &amp; 4 Cartridges - Plug In Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (2 Plug In Devices &amp; 4 Cartridges)\n27. Terro Fruit Fly Traps for Indoors (4 Pack) + 180 Days of Lure Supply\n28. Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy Care -1 Fitted Sheet Only (Grey)\n29. Cutter Backyard Bug Control Spray Concentrate (2 Pack), Kills Mosquitoes, Fleas &amp; Listed Ants, 32 fl Ounce\n30. Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up to 16 Inches Deep, Machine Washable (White)\n31. American Flag | American Flags for Outside 3X5 |100% Made in USA Flag - Premium US Flag 3X5 Heavy Duty Outdoor with Embroidered Stars and Sewn Stripes.\n32. Dreo Tower Fan for Bedroom, 25ft/s Velocity Quiet Floor Fan, 90\u00b0 Oscillating Fans for Indoors with 4 Speeds, 4 Modes, 8H Timer, Standing Fans, Bladeless Fan, Black, Nomad One (DR-HTF007)\n33. Bonide Captain Jack&#39;s Neem Oil, 32 oz Ready-to-Use Spray, Multi-Purpose Fungicide, Insecticide and Miticide for Organic Gardening\n34. STANLEY Quencher H2.0 FlowState Stainless Steel\n35. ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner, Light-Weight &amp; Machine Washable - Standard Size 72x72, White\n36. Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with Envelope Closure, Gifts for Women Men, Silver Grey, 20x30 Inches\n37. EHZNZIE Clear Shower Curtain Liner Light Weight PEVA, Shower Liner 72x72 Inches, Waterproof, No Chemical Smell with 12 Rust Proof Metal Grommets for Bathroom Shower Curtain\n38. Thermacell E-Series Rechargeable Mosquito Repeller with 20\u2019 Mosquito Protection Zone; Bug Spray Alternative; Scent Free\n39. Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel\n40. Alpha Grillers Meat Thermometer Digital - Instant Read Food Thermometer for Cooking Grilling Air Fryer Griddle Probe Kitchen Gadgets Essentials BBQ Accessories Grill Gifts for Men Him Dad Birthday\n41. NEW JETO Metal Bed Frame,Queen Size Bed Frame with Storage Space,Heavy Duty Sturdy Mattress Foundation,Easy Assembly,No Box Spring Needed, Black,14 Inch,Queen\n42. LiBa Bathroom Shower Curtain Waterproof Plastic Shower Curtain Premium PEVA Non-Toxic with Rust Proof Grommets Clear 8G Bathroom Accessories 72x72\n43. HIBAG Vacuum Storage Bags, 10 Jumbo Space Saver Vacuum Seal Bags, Space Bags, Vacuum Sealer Bags for Clothes, Comforters, Blankets, Bedding (10J)\n44. GOOTOP Bug Zapper Outdoor, Mosquito Zapper, Electric Fly Zapper, Mosquito Killer, Fly Traps, 3 Prong Plug, Flying Insects Zapper Indoor Outdoor 90-130V, 4200V, ABS Plastic Outer (Black)\n45. BigFoot Shower Curtain Liner \u2013 72 x 72 PEVA Premium Shower Curtain with Rustproof Metal Grommet and 3 Magnetic Weights \u2013 Odor Free and Compatible with Standard Showers, Clear\n46. Utopia Bedding Zippered Mattress Encasement Queen, 100% Waterproof Bed Bug and Dust Mite Proof Mattress Protector, Absorbent Six-Sided Mattress Cover\n1. Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch Deep Pockets, Twin, Navy Blue, Solid, Kids, Men &amp; Women Bedding\n2. TERRO Ant Killer Bait Stations T300B - Liquid Bait to Eliminate Ants - 12 Count Stations for Effective Indoor Ant Control\n3. Zevo Flying Insect Trap &amp; Cartridge - Plug in Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (1 Plug in Device &amp; 1 Cartridge)\n4. Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &amp; Teens - Deep Pockets, Easy Secure Fit, Soft and Wrinkle Free - Oeko-Tex - White\n5. Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Denim\n6. STANLEY Quencher H2.0 Tumbler with Handle and Straw 40 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel | Insulated Stainless Steel Cup | BPA-Free | Fuchsia\n7. Zevo Flying Insect Trap Refill - for The Zevo MAX &amp; Standard Indoor Fly Trap - Catch Gnats, House &amp; Fruit Flies - Easy to Use - Mess-Free Disposal (4 Refill Cartridges)\n8. Thermacell Mosquito Repeller Patio Shield; Includes 12-Hour Refill; 15 Foot Zone of Protection; Highly Effective Mosquito Repellent for Patio; Bug Spray Alternative; Scent Free\n9. Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black\n10. Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets, Waterproof Cute Lightweight Standard Size Bathroom Curtains - Clear\n11. upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack\n12. Utopia Bedding Queen Sheet Set \u2013 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases (Grey)\n13. JISULIFE Handheld Mini Fan, 3 IN 1 USB Rechargeable Portable Fan [12-19 Working Hours] with Power Bank, Flashlight, Pocket Design for Travel/Summer/Concerts/Lash, Gifts for Women (Pink)\n14. Chapin 20000 Made in USA 1 -Gallon Lawn and Garden Pump Pressured Sprayer, for Spraying Plants, Garden Watering, Weeds and Pests, Polypropylene, Translucent White\n15. Utopia Bedding Waterproof Mattress Protector Twin Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style with Stretchable Pockets (White)\n16. Amazon Echo Spot (newest model), Great for nightstands, offices and kitchens, Smart alarm clock with Alexa, Black\n17. Safer Home Indoor Plug-In Fly Trap - SH502 - Effective Fruit Fly Traps for Indoors, Gnat Traps for House Indoor, 400 Sq Ft Protection - Style: 1 Device + 2 Glue Cards\n18. Summit...responsible solutions 110-12 Mosquito Dunks, 6-Pack\n19. Flexzilla Garden Hose 5/8 in. x 50 ft., Lightweight All-Weather Water Hose, Durable and Flexible, Leak-Free Connections\n20. OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. PlayHot Portable Handheld Turbo Fan, 5 Gear Wind, Battery Operated, Up to 12 Working Hours, 3 IN 1 Hand Fan with Air Turbo Tech Cooling Fan for Outdoor Activities, Travel, Beach (Black)\n22. HTH 52037R Pool Care Shock Advanced, Swimming Pool Chemical - Cal Hypo Formula, Prevents Bacteria &amp; Algae, Restores Crystal Clear Water - Shock Treatment, 1lb (12 Pack)\n23. Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow\n24. Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers\n25. Amazon Basics Air Circulator Fan, Desk Fan for Bedroom, Home and Office, With 90-Degree Tilt Head, 3 Speed Settings, Lightweight (3 LBS), 35 Watts, Black, 11.1\&#34;W x 6.3\&#34;D x 10.9\&#34;H\n26. Zevo 2 Flying Insect Traps &amp; 4 Cartridges - Plug In Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (2 Plug In Devices &amp; 4 Cartridges)\n27. Terro Fruit Fly Traps for Indoors (4 Pack) + 180 Days of Lure Supply\n28. Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy Care -1 Fitted Sheet Only (Grey)\n29. Cutter Backyard Bug Control Spray Concentrate (2 Pack), Kills Mosquitoes, Fleas &amp; Listed Ants, 32 fl Ounce\n30. Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up to 16 Inches Deep, Machine Washable (White)\n31. American Flag | American Flags for Outside 3X5 |100% Made in USA Flag - Premium US Flag 3X5 Heavy Duty Outdoor with Embroidered Stars and Sewn Stripes.\n32. Dreo Tower Fan for Bedroom, 25ft/s Velocity Quiet Floor Fan, 90\u00b0 Oscillating Fans for Indoors with 4 Speeds, 4 Modes, 8H Timer, Standing Fans, Bladeless Fan, Black, Nomad One (DR-HTF007)\n33. Bonide Captain Jack&#39;s Neem Oil, 32 oz Ready-to-Use Spray, Multi-Purpose Fungicide, Insecticide and Miticide for Organic Gardening\n34. STANLEY Quencher H2.0 FlowState Stainless Steel\n35. ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner, Light-Weight &amp; Machine Washable - Standard Size 72x72, White\n36. Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with Envelope Closure, Gifts for Women Men, Silver Grey, 20x30 Inches\n37. EHZNZIE Clear Shower Curtain Liner Light Weight PEVA, Shower Liner 72x72 Inches, Waterproof, No Chemical Smell with 12 Rust Proof Metal Grommets for Bathroom Shower Curtain\n38. Thermacell E-Series Rechargeable Mosquito Repeller with 20\u2019 Mosquito Protection Zone; Bug Spray Alternative; Scent Free\n39. Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel\n40. Alpha Grillers Meat Thermometer Digital - Instant Read Food Thermometer for Cooking Grilling Air Fryer Griddle Probe Kitchen Gadgets Essentials BBQ Accessories Grill Gifts for Men Him Dad Birthday\n41. NEW JETO Metal Bed Frame,Queen Size Bed Frame with Storage Space,Heavy Duty Sturdy Mattress Foundation,Easy Assembly,No Box Spring Needed, Black,14 Inch,Queen\n42. LiBa Bathroom Shower Curtain Waterproof Plastic Shower Curtain Premium PEVA Non-Toxic with Rust Proof Grommets Clear 8G Bathroom Accessories 72x72\n43. HIBAG Vacuum Storage Bags, 10 Jumbo Space Saver Vacuum Seal Bags, Space Bags, Vacuum Sealer Bags for Clothes, Comforters, Blankets, Bedding (10J)\n44. GOOTOP Bug Zapper Outdoor, Mosquito Zapper, Electric Fly Zapper, Mosquito Killer, Fly Traps, 3 Prong Plug, Flying Insects Zapper Indoor Outdoor 90-130V, 4200V, ABS Plastic Outer (Black)\n45. BigFoot Shower Curtain Liner \u2013 72 x 72 PEVA Premium Shower Curtain with Rustproof Metal Grommet and 3 Magnetic Weights \u2013 Odor Free and Compatible with Standard Showers, Clear\n46. Utopia Bedding Zippered Mattress Encasement Queen, 100% Waterproof Bed Bug and Dust Mite Proof Mattress Protector, Absorbent Six-Sided Mattress Cover\n47. Beckham Hotel Collection Bed Pillows Standard/Queen Size Set of 2 - Original Down Alternative Pillow for Sleeping - Bedding for Back, Stomach or Side Sleepers\n48. Utopia Bedding Throw Pillows (Set of 4, White), 18 x 18 Inches Pillows for Sofa, Bed and Couch Decorative Stuffer Pillow\n49. HydroJug Traveler - 40 oz Water Bottle with Handle &amp; Flip Straw - Fits in Cup Holder, Leak Resistant Tumbler-Reusable Insulated Stainless Steel &amp; Rubber Base - Gifts for Women &amp; Men, Cream\n50. Honeywell Turboforce Fan, Ht-900, 11 inch\n1. Amazon Basics Lightweight Super Soft Easy Care Wrinkle Free Microfiber 3 Piece Bed Sheet Set with 14-Inch Deep Pockets, Twin, Navy Blue, Solid, Kids, Men &amp; Women Bedding\n2. TERRO Ant Killer Bait Stations T300B - Liquid Bait to Eliminate Ants - 12 Count Stations for Effective Indoor Ant Control\n3. Zevo Flying Insect Trap &amp; Cartridge - Plug in Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (1 Plug in Device &amp; 1 Cartridge)\n4. Queen Size 4 Piece Sheet Set - Comfy Breathable &amp; Cooling Bed Sheets Set - Hotel Luxury Bedding for Women, Men, Kids &amp; Teens - Deep Pockets, Easy Secure Fit, Soft and Wrinkle Free - Oeko-Tex - White\n5. Owala FreeSip Insulated Stainless Steel Water Bottle with Straw, BPA-Free Sports Water Bottle, Great for Travel, 24 Oz, Denim\n6. STANLEY Quencher H2.0 Tumbler with Handle and Straw 40 oz | Flowstate 3-Position Lid | Cup Holder Compatible for Travel | Insulated Stainless Steel Cup | BPA-Free | Fuchsia\n7. Zevo Flying Insect Trap Refill - for The Zevo MAX &amp; Standard Indoor Fly Trap - Catch Gnats, House &amp; Fruit Flies - Easy to Use - Mess-Free Disposal (4 Refill Cartridges)\n8. Thermacell Mosquito Repeller Patio Shield; Includes 12-Hour Refill; 15 Foot Zone of Protection; Highly Effective Mosquito Repellent for Patio; Bug Spray Alternative; Scent Free\n9. Amazon Basics Slim, Velvet, Non-Slip Suit Clothes Hangers, Pack of 50, Black\n10. Barossa Design Plastic Shower Liner Clear - Premium PEVA Shower Curtain Liner with Rustproof Grommets and 3 Magnets, Waterproof Cute Lightweight Standard Size Bathroom Curtains - Clear\n11. upsimples 8x10 Picture Frame, Display Pictures 5x7 with Mat or 8x10 Without Mat, Wall Hanging Photo Frame, Black, 1 Pack\n12. Utopia Bedding Queen Sheet Set \u2013 4 Piece Bed Sheets for Queen Size Bed, Soft and Breathable Microfiber, Includes 1 Fitted Sheet, 1 Flat Sheet and 2 Pillowcases (Grey)\n13. JISULIFE Handheld Mini Fan, 3 IN 1 USB Rechargeable Portable Fan [12-19 Working Hours] with Power Bank, Flashlight, Pocket Design for Travel/Summer/Concerts/Lash, Gifts for Women (Pink)\n14. Chapin 20000 Made in USA 1 -Gallon Lawn and Garden Pump Pressured Sprayer, for Spraying Plants, Garden Watering, Weeds and Pests, Polypropylene, Translucent White\n15. Utopia Bedding Waterproof Mattress Protector Twin Size, Premium Terry Mattress Cover 200 GSM, Breathable, Fitted Style with Stretchable Pockets (White)\n16. Amazon Echo Spot (newest model), Great for nightstands, offices and kitchens, Smart alarm clock with Alexa, Black\n17. Safer Home Indoor Plug-In Fly Trap - SH502 - Effective Fruit Fly Traps for Indoors, Gnat Traps for House Indoor, 400 Sq Ft Protection - Style: 1 Device + 2 Glue Cards\n18. Summit...responsible solutions 110-12 Mosquito Dunks, 6-Pack\n19. Flexzilla Garden Hose 5/8 in. x 50 ft., Lightweight All-Weather Water Hose, Durable and Flexible, Leak-Free Connections\n20. OLANLY Bathroom Rugs 30x20, Extra Soft Absorbent Chenille Bath Rugs, Rubber Backing Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. PlayHot Portable Handheld Turbo Fan, 5 Gear Wind, Battery Operated, Up to 12 Working Hours, 3 IN 1 Hand Fan with Air Turbo Tech Cooling Fan for Outdoor Activities, Travel, Beach (Black)\n22. HTH 52037R Pool Care Shock Advanced, Swimming Pool Chemical - Cal Hypo Formula, Prevents Bacteria &amp; Algae, Restores Crystal Clear Water - Shock Treatment, 1lb (12 Pack)\n23. Utopia Bedding Throw Pillows Insert (Pack of 2, White) - 18 x 18 Inches Bed and Couch Pillows - Indoor Decorative Pillow\n24. Utopia Bedding Bed Pillows for Sleeping Queen Size (White), Set of 2, Cooling Hotel Quality, Gusseted Pillow for Back, Stomach or Side Sleepers\n25. Amazon Basics Air Circulator Fan, Desk Fan for Bedroom, Home and Office, With 90-Degree Tilt Head, 3 Speed Settings, Lightweight (3 LBS), 35 Watts, Black, 11.1\&#34;W x 6.3\&#34;D x 10.9\&#34;H\n26. Zevo 2 Flying Insect Traps &amp; 4 Cartridges - Plug In Fly Trap &amp; Indoor Bug Catcher for Gnats, House &amp; Fruit Flies - Mess-Free - Use in Any Room - Uses Blue &amp; UV Light (2 Plug In Devices &amp; 4 Cartridges)\n27. Terro Fruit Fly Traps for Indoors (4 Pack) + 180 Days of Lure Supply\n28. Utopia Bedding Queen Fitted Sheet - Bottom Sheet - Deep Pocket - Soft Microfiber - Shrinkage and Fade Resistant - Easy Care -1 Fitted Sheet Only (Grey)\n29. Cutter Backyard Bug Control Spray Concentrate (2 Pack), Kills Mosquitoes, Fleas &amp; Listed Ants, 32 fl Ounce\n30. Utopia Bedding Quilted Fitted Mattress Pad, Queen Size, Elastic Fitted Mattress Topper Protector and Cover Stretches up to 16 Inches Deep, Machine Washable (White)\n31. American Flag | American Flags for Outside 3X5 |100% Made in USA Flag - Premium US Flag 3X5 Heavy Duty Outdoor with Embroidered Stars and Sewn Stripes.\n32. Dreo Tower Fan for Bedroom, 25ft/s Velocity Quiet Floor Fan, 90\u00b0 Oscillating Fans for Indoors with 4 Speeds, 4 Modes, 8H Timer, Standing Fans, Bladeless Fan, Black, Nomad One (DR-HTF007)\n33. Bonide Captain Jack&#39;s Neem Oil, 32 oz Ready-to-Use Spray, Multi-Purpose Fungicide, Insecticide and Miticide for Organic Gardening\n34. STANLEY Quencher H2.0 FlowState Stainless Steel\n35. ALYVIA SPRING Waterproof Fabric Shower Curtain Liner with 3 Magnets - Soft Hotel Quality Cloth Shower Liner, Light-Weight &amp; Machine Washable - Standard Size 72x72, White\n36. Bedsure Satin Pillowcase, Similar to Silk Pillow Cases Queen Size Set of 2, Cooling Pillow Case for Hot Sleepers with Envelope Closure, Gifts for Women Men, Silver Grey, 20x30 Inches\n37. EHZNZIE Clear Shower Curtain Liner Light Weight PEVA, Shower Liner 72x72 Inches, Waterproof, No Chemical Smell with 12 Rust Proof Metal Grommets for Bathroom Shower Curtain\n38. Thermacell E-Series Rechargeable Mosquito Repeller with 20\u2019 Mosquito Protection Zone; Bug Spray Alternative; Scent Free\n39. Amazon Basics Digital Kitchen Scale with LCD Display, Batteries Included, Weighs up to 11 pounds, Black and Stainless Steel\n40. Alpha Grillers Meat Thermometer Digital - Instant Read Food Thermometer for Cooking Grilling Air Fryer Griddle Probe Kitchen Gadgets Essentials BBQ Accessories Grill Gifts for Men Him Dad Birthday\n41. NEW JETO Metal Bed Frame,Queen Size Bed Frame with Storage Space,Heavy Duty Sturdy Mattress Foundation,Easy Assembly,No Box Spring Needed, Black,14 Inch,Queen\n42. LiBa Bathroom Shower Curtain Waterproof Plastic Shower Curtain Premium PEVA Non-Toxic with Rust Proof Grommets Clear 8G Bathroom Accessories 72x72\n43. HIBAG Vacuum Storage Bags, 10 Jumbo Space Saver Vacuum Seal Bags, Space Bags, Vacuum Sealer Bags for Clothes, Comforters, Blankets, Bedding (10J)\n44. GOOTOP Bug Zapper Outdoor, Mosquito Zapper, Electric Fly Zapper, Mosquito Killer, Fly Traps, 3 Prong Plug, Flying Insects Zapper Indoor Outdoor 90-130V, 4200V, ABS Plastic Outer (Black)\n45. BigFoot Shower Curtain Liner \u2013 72 x 72 PEVA Premium Shower Curtain with Rustproof Metal Grommet and 3 Magnetic Weights \u2013 Odor Free and Compatible with Standard Showers, Clear\n46. Utopia Bedding Zippered Mattress Encasement Queen, 100% Waterproof Bed Bug and Dust Mite Proof Mattress Protector, Absorbent Six-Sided Mattress Cover\n47. Beckham Hotel Collection Bed Pillows Standard/Queen Size Set of 2 - Original Down Alternative Pillow for Sleeping - Bedding for Back, Stomach or Side Sleepers\n48. Utopia Bedding Throw Pillows (Set of 4, White), 18 x 18 Inches Pillows for Sofa, Bed and Couch Decorative Stuffer Pillow\n49. HydroJug Traveler - 40 oz Water Bottle with Handle &amp; Flip Straw - Fits in Cup Holder, Leak Resistant Tumbler-Reusable Insulated Stainless Steel &amp; Rubber Base - Gifts for Women &amp; Men, Cream\n50. Honeywell Turboforce Fan, Ht-900, 11 inch\n1. Roundup Weed and Grass Killer\u2084 with Pump &#39;N Go 2 Sprayer, Use in and Around Flower Beds, Trees &amp; More, 1.33 gal.\n2. Coffee Machine Cleaner Descaler Tablets - 24 Count, Compatible With Nespresso, Keurig, Ninja, Delonghi, Miele, Coffee Maker Pot Descaling &amp; Cleaning Tabs, Descale Drip Coffe And Espresso Machines\n3. Gaiatop Mini Portable Fan, Small and Powerful, Cute Design 3 Speed Personal Handheld fan and Desktop with Base, Lightweight USB Rechargeable for Travel Lash Makeup Girl Women Summer Gift Pink\n4. Mrs Awesome Clear Shower Curtain Liner with 3 Magnets, 72x72 Premium Flexible Sturdy Plastic Shower Curtain for Bathroom Lightweight, Waterproof, Clear\n5. American Soft Linen Luxury Washcloths for Bathroom, 600 GSM 100% Cotton 4 Piece Turkish Wash Cloth Set, 13x13 in Soft Rags for Body and Face, White Washcloths\n6. EUDELE Adhesive Shower Caddy, 5 Pack Rustproof Stainless Steel Bath Organizers With Large Capacity, No Drilling Shelves for Bathroom Storage &amp; Home Decor\n7. Hefty Party On Disposable Plastic Cups, Assorted, 16 Ounce, 100 Count\n8. LEVOIT Air Purifiers for Bedroom Home, 3-in-1 Filter Cleaner with Fragrance Sponge for Better Sleep, Filters Smoke, Allergies, Pet Dander, Odor, Dust, Office, Desktop, Portable, Core Mini-P, White\n9. Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel\n10. 20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and Blankets, Sealer Clothes Storage, Hand Pump Included\n11. Thermacell Rechargeable Mosquito Repeller Refills; Advanced Repellent Formula Provides 20 Foot Protection Zone; Compatible with Thermacell E-Series &amp; Radius Only; No DEET, Spray or Flame\n12. Shark Upright Vacuum, Navigator Lift-Away Deluxe with Large Dust Cup Capacity, HEPA Filter, Swivel Steering, Upholstery Tool &amp; Crevice Tool, Blue, NV360\n13. Utopia Home - Plastic Hangers 50 Pack - Perfect Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage Makes It Ideal Dorm Room Essentials for Girls or Guys (White)\n14. Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green\n15. Ortho Home Defense Max Indoor Insect Barrier with Extended Reach Comfort Wand, Kills Ants, Roaches, Spiders, Fleas and Ticks, 1 gal.\n16. TUNISE Portable Handheld Fan, 4000mAh, 180 Adjustable, 6 Speed Wind, Display Electricity in Real Time, USB Rechargeable Foldable Personal Fan\n17. EASYTEST 7-Way Pool Test Strips, 150 Strips Water Chemical Testing for Hot tub and Spa, Accurate Test Bromine, Total Alkalinity, pH, Free Chlorine, Total Hardness, Cyanuric Acid, and Total Chlorine\n18. ZINUS 5 Inch Green Tea Memory Foam Mattress [New Version], Twin, Fiberglass free, Medium Firm Feel, Zoned Pressure Relief, Certified Safe Foams &amp; Fabric, Mattress in A Box\n19. Bedsure Comforter Duvet Insert - Quilted Comforters Queen Size, All Season Duvet, Down Alternative Bedding, with 8 Tabs, Gifts for Women/Men, White, Queen 88 x 88 Inches\n20. OLANLY Bathroom Rugs Mat 30x20, Extra Soft Absorbent Microfiber Bath Rugs, Rubber Backing, Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. AUTOMAN-Garden-Hose-Nozzle, ABS Water Spray Nozzle with 7 Adjustable Watering Patterns, Slip Resistant for Watering Plants, Lawn&amp; Garden, Washing Cars, Cleaning, Showering Pets &amp; Outdoor Fun.\n22. NICETOWN Halloween Pitch Black Solid Thermal Insulated Grommet Blackout Curtains/Drapes for Bedroom Window (2 Panels, 42 inches Wide by 63 inches Long, Black)\n23. Amazon Basics 16\&#34; Pedestal Fan with Remote, Floor Fan, Standing Fan for Bedroom, Living Room, Office, with 3 Speeds, 3 Modes, Timer, Dual-Layered Blades, Adjustable Height, Tilt Head, 60W, Black\n24. napfun Neck Pillow for Traveling, Upgraded Travel Neck Pillow for Airplane 100% Pure Memory Foam Travel Pillow for Flight Headrest Sleep, Portable Plane Accessories, Light Grey\n25. HOOSUN 4th Of July Decorations,American Flag Bunting for Outside,3x6 FT Fourth of July Bunting Patriotic Decorations,Red White and Blue USA Flags Pleated Fan Flag,American Flags Banners for Porch\n26. Miracle-Gro Water Soluble All Purpose Plant Food, Fertilizer for Indoor or Outdoor Flowers, Vegetables or Trees, 3 lbs.\n27. 6 Pack Extra Heavy Duty Large Moving Bags with Strong Zipper &amp; Comfortable Handles, Sturdy &amp; Durable Clothes Storage Bags Totes Bins, Blue Packing Moving Boxes for College Supplies, Dark Blue\n28. YASONIC Shower Caddy, 6 Pack Large Capacity shower Organizer with Soap Holder and 12 Hooks, Rustproof Shower Shelves for Inside Shower, No Drilling&amp;Sleek Bathroom Organizers and Storage\n29. Amazon Echo Show 5 (newest model), Smart display with 2x the bass and clearer sound, Charcoal\n30. Vtopmart 25 PCS Clear Plastic Drawer Organizers Set, 4-Size Versatile Bathroom and Vanity Drawer Organizer Trays, Storage Bins for Makeup, Bedroom, Kitchen Gadgets Utensils and Office\n1. Roundup Weed and Grass Killer\u2084 with Pump &#39;N Go 2 Sprayer, Use in and Around Flower Beds, Trees &amp; More, 1.33 gal.\n2. Coffee Machine Cleaner Descaler Tablets - 24 Count, Compatible With Nespresso, Keurig, Ninja, Delonghi, Miele, Coffee Maker Pot Descaling &amp; Cleaning Tabs, Descale Drip Coffe And Espresso Machines\n3. Gaiatop Mini Portable Fan, Small and Powerful, Cute Design 3 Speed Personal Handheld fan and Desktop with Base, Lightweight USB Rechargeable for Travel Lash Makeup Girl Women Summer Gift Pink\n4. Mrs Awesome Clear Shower Curtain Liner with 3 Magnets, 72x72 Premium Flexible Sturdy Plastic Shower Curtain for Bathroom Lightweight, Waterproof, Clear\n5. American Soft Linen Luxury Washcloths for Bathroom, 600 GSM 100% Cotton 4 Piece Turkish Wash Cloth Set, 13x13 in Soft Rags for Body and Face, White Washcloths\n6. EUDELE Adhesive Shower Caddy, 5 Pack Rustproof Stainless Steel Bath Organizers With Large Capacity, No Drilling Shelves for Bathroom Storage &amp; Home Decor\n7. Hefty Party On Disposable Plastic Cups, Assorted, 16 Ounce, 100 Count\n8. LEVOIT Air Purifiers for Bedroom Home, 3-in-1 Filter Cleaner with Fragrance Sponge for Better Sleep, Filters Smoke, Allergies, Pet Dander, Odor, Dust, Office, Desktop, Portable, Core Mini-P, White\n9. Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel\n10. 20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and Blankets, Sealer Clothes Storage, Hand Pump Included\n11. Thermacell Rechargeable Mosquito Repeller Refills; Advanced Repellent Formula Provides 20 Foot Protection Zone; Compatible with Thermacell E-Series &amp; Radius Only; No DEET, Spray or Flame\n12. Shark Upright Vacuum, Navigator Lift-Away Deluxe with Large Dust Cup Capacity, HEPA Filter, Swivel Steering, Upholstery Tool &amp; Crevice Tool, Blue, NV360\n13. Utopia Home - Plastic Hangers 50 Pack - Perfect Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage Makes It Ideal Dorm Room Essentials for Girls or Guys (White)\n14. Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green\n15. Ortho Home Defense Max Indoor Insect Barrier with Extended Reach Comfort Wand, Kills Ants, Roaches, Spiders, Fleas and Ticks, 1 gal.\n16. TUNISE Portable Handheld Fan, 4000mAh, 180 Adjustable, 6 Speed Wind, Display Electricity in Real Time, USB Rechargeable Foldable Personal Fan\n17. EASYTEST 7-Way Pool Test Strips, 150 Strips Water Chemical Testing for Hot tub and Spa, Accurate Test Bromine, Total Alkalinity, pH, Free Chlorine, Total Hardness, Cyanuric Acid, and Total Chlorine\n18. ZINUS 5 Inch Green Tea Memory Foam Mattress [New Version], Twin, Fiberglass free, Medium Firm Feel, Zoned Pressure Relief, Certified Safe Foams &amp; Fabric, Mattress in A Box\n19. Bedsure Comforter Duvet Insert - Quilted Comforters Queen Size, All Season Duvet, Down Alternative Bedding, with 8 Tabs, Gifts for Women/Men, White, Queen 88 x 88 Inches\n20. OLANLY Bathroom Rugs Mat 30x20, Extra Soft Absorbent Microfiber Bath Rugs, Rubber Backing, Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. AUTOMAN-Garden-Hose-Nozzle, ABS Water Spray Nozzle with 7 Adjustable Watering Patterns, Slip Resistant for Watering Plants, Lawn&amp; Garden, Washing Cars, Cleaning, Showering Pets &amp; Outdoor Fun.\n22. NICETOWN Halloween Pitch Black Solid Thermal Insulated Grommet Blackout Curtains/Drapes for Bedroom Window (2 Panels, 42 inches Wide by 63 inches Long, Black)\n23. Amazon Basics 16\&#34; Pedestal Fan with Remote, Floor Fan, Standing Fan for Bedroom, Living Room, Office, with 3 Speeds, 3 Modes, Timer, Dual-Layered Blades, Adjustable Height, Tilt Head, 60W, Black\n24. napfun Neck Pillow for Traveling, Upgraded Travel Neck Pillow for Airplane 100% Pure Memory Foam Travel Pillow for Flight Headrest Sleep, Portable Plane Accessories, Light Grey\n25. HOOSUN 4th Of July Decorations,American Flag Bunting for Outside,3x6 FT Fourth of July Bunting Patriotic Decorations,Red White and Blue USA Flags Pleated Fan Flag,American Flags Banners for Porch\n26. Miracle-Gro Water Soluble All Purpose Plant Food, Fertilizer for Indoor or Outdoor Flowers, Vegetables or Trees, 3 lbs.\n27. 6 Pack Extra Heavy Duty Large Moving Bags with Strong Zipper &amp; Comfortable Handles, Sturdy &amp; Durable Clothes Storage Bags Totes Bins, Blue Packing Moving Boxes for College Supplies, Dark Blue\n28. YASONIC Shower Caddy, 6 Pack Large Capacity shower Organizer with Soap Holder and 12 Hooks, Rustproof Shower Shelves for Inside Shower, No Drilling&amp;Sleek Bathroom Organizers and Storage\n29. Amazon Echo Show 5 (newest model), Smart display with 2x the bass and clearer sound, Charcoal\n30. Vtopmart 25 PCS Clear Plastic Drawer Organizers Set, 4-Size Versatile Bathroom and Vanity Drawer Organizer Trays, Storage Bins for Makeup, Bedroom, Kitchen Gadgets Utensils and Office\n31. AmazerBath Shower Curtain Liner, 72x72 Clear Shower Curtain Liner, Waterproof Plastic Shower Liner, Cute Lightweight PEVA Shower Curtain for Bathroom with 3 Magnets and 12 Rustproof Metal Grommets\n32. Titanker Shower Curtain Hooks Rings, Rust Resistant Metal Double Glide Shower Hooks Rings for Bathroom Shower Rods Curtains, Set of 12 Hooks - Nickel\n33. 12 Pcs Small American Flags On Stick,Patriotic Decorations Small USA Flags On Stick\uff0cMini American 4&#39;&#39;x6&#39;&#39; Flag, Fourth Of July Flags For Outside Patriotic Holiday Yard Patio,Labor Day Decorations\n34. SafeRest Waterproof Queen Size Mattress Protector - Fitted with Stretchable Pockets - Machine Washable Cotton Mattress Cover for Bed\n35. Intex 64417ED 22in Queen Dura-Beam Comfort Plush High-Rise Inflatable Air Mattress with Built in Pump for Travel and Camping, 600lb Weight Capacity\n36. Utopia Bedding Comforter Duvet Insert, Quilted Comforter with Corner Tabs, Box Stitched Down Alternative Comforters Queen Size (White)\n37. Raid Ant Killer Baits, Child Resistant Bug Killer for Indoor Home Use, 0.24 Oz, 8 Count\n38. Cisily Black Sponge Holder for Kitchen Sink, Sink Caddy Organizer with High Brush Holder, Kitchen Countertop Organizers and Storage Essentials, Rustproof 304 Stainless Steel, Soap Dispenser Organize\n1. Roundup Weed and Grass Killer\u2084 with Pump &#39;N Go 2 Sprayer, Use in and Around Flower Beds, Trees &amp; More, 1.33 gal.\n2. Coffee Machine Cleaner Descaler Tablets - 24 Count, Compatible With Nespresso, Keurig, Ninja, Delonghi, Miele, Coffee Maker Pot Descaling &amp; Cleaning Tabs, Descale Drip Coffe And Espresso Machines\n3. Gaiatop Mini Portable Fan, Small and Powerful, Cute Design 3 Speed Personal Handheld fan and Desktop with Base, Lightweight USB Rechargeable for Travel Lash Makeup Girl Women Summer Gift Pink\n4. Mrs Awesome Clear Shower Curtain Liner with 3 Magnets, 72x72 Premium Flexible Sturdy Plastic Shower Curtain for Bathroom Lightweight, Waterproof, Clear\n5. American Soft Linen Luxury Washcloths for Bathroom, 600 GSM 100% Cotton 4 Piece Turkish Wash Cloth Set, 13x13 in Soft Rags for Body and Face, White Washcloths\n6. EUDELE Adhesive Shower Caddy, 5 Pack Rustproof Stainless Steel Bath Organizers With Large Capacity, No Drilling Shelves for Bathroom Storage &amp; Home Decor\n7. Hefty Party On Disposable Plastic Cups, Assorted, 16 Ounce, 100 Count\n8. LEVOIT Air Purifiers for Bedroom Home, 3-in-1 Filter Cleaner with Fragrance Sponge for Better Sleep, Filters Smoke, Allergies, Pet Dander, Odor, Dust, Office, Desktop, Portable, Core Mini-P, White\n9. Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel\n10. 20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and Blankets, Sealer Clothes Storage, Hand Pump Included\n11. Thermacell Rechargeable Mosquito Repeller Refills; Advanced Repellent Formula Provides 20 Foot Protection Zone; Compatible with Thermacell E-Series &amp; Radius Only; No DEET, Spray or Flame\n12. Shark Upright Vacuum, Navigator Lift-Away Deluxe with Large Dust Cup Capacity, HEPA Filter, Swivel Steering, Upholstery Tool &amp; Crevice Tool, Blue, NV360\n13. Utopia Home - Plastic Hangers 50 Pack - Perfect Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage Makes It Ideal Dorm Room Essentials for Girls or Guys (White)\n14. Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green\n15. Ortho Home Defense Max Indoor Insect Barrier with Extended Reach Comfort Wand, Kills Ants, Roaches, Spiders, Fleas and Ticks, 1 gal.\n16. TUNISE Portable Handheld Fan, 4000mAh, 180 Adjustable, 6 Speed Wind, Display Electricity in Real Time, USB Rechargeable Foldable Personal Fan\n17. EASYTEST 7-Way Pool Test Strips, 150 Strips Water Chemical Testing for Hot tub and Spa, Accurate Test Bromine, Total Alkalinity, pH, Free Chlorine, Total Hardness, Cyanuric Acid, and Total Chlorine\n18. ZINUS 5 Inch Green Tea Memory Foam Mattress [New Version], Twin, Fiberglass free, Medium Firm Feel, Zoned Pressure Relief, Certified Safe Foams &amp; Fabric, Mattress in A Box\n19. Bedsure Comforter Duvet Insert - Quilted Comforters Queen Size, All Season Duvet, Down Alternative Bedding, with 8 Tabs, Gifts for Women/Men, White, Queen 88 x 88 Inches\n20. OLANLY Bathroom Rugs Mat 30x20, Extra Soft Absorbent Microfiber Bath Rugs, Rubber Backing, Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. AUTOMAN-Garden-Hose-Nozzle, ABS Water Spray Nozzle with 7 Adjustable Watering Patterns, Slip Resistant for Watering Plants, Lawn&amp; Garden, Washing Cars, Cleaning, Showering Pets &amp; Outdoor Fun.\n22. NICETOWN Halloween Pitch Black Solid Thermal Insulated Grommet Blackout Curtains/Drapes for Bedroom Window (2 Panels, 42 inches Wide by 63 inches Long, Black)\n23. Amazon Basics 16\&#34; Pedestal Fan with Remote, Floor Fan, Standing Fan for Bedroom, Living Room, Office, with 3 Speeds, 3 Modes, Timer, Dual-Layered Blades, Adjustable Height, Tilt Head, 60W, Black\n24. napfun Neck Pillow for Traveling, Upgraded Travel Neck Pillow for Airplane 100% Pure Memory Foam Travel Pillow for Flight Headrest Sleep, Portable Plane Accessories, Light Grey\n25. HOOSUN 4th Of July Decorations,American Flag Bunting for Outside,3x6 FT Fourth of July Bunting Patriotic Decorations,Red White and Blue USA Flags Pleated Fan Flag,American Flags Banners for Porch\n26. Miracle-Gro Water Soluble All Purpose Plant Food, Fertilizer for Indoor or Outdoor Flowers, Vegetables or Trees, 3 lbs.\n27. 6 Pack Extra Heavy Duty Large Moving Bags with Strong Zipper &amp; Comfortable Handles, Sturdy &amp; Durable Clothes Storage Bags Totes Bins, Blue Packing Moving Boxes for College Supplies, Dark Blue\n28. YASONIC Shower Caddy, 6 Pack Large Capacity shower Organizer with Soap Holder and 12 Hooks, Rustproof Shower Shelves for Inside Shower, No Drilling&amp;Sleek Bathroom Organizers and Storage\n29. Amazon Echo Show 5 (newest model), Smart display with 2x the bass and clearer sound, Charcoal\n30. Vtopmart 25 PCS Clear Plastic Drawer Organizers Set, 4-Size Versatile Bathroom and Vanity Drawer Organizer Trays, Storage Bins for Makeup, Bedroom, Kitchen Gadgets Utensils and Office\n31. AmazerBath Shower Curtain Liner, 72x72 Clear Shower Curtain Liner, Waterproof Plastic Shower Liner, Cute Lightweight PEVA Shower Curtain for Bathroom with 3 Magnets and 12 Rustproof Metal Grommets\n32. Titanker Shower Curtain Hooks Rings, Rust Resistant Metal Double Glide Shower Hooks Rings for Bathroom Shower Rods Curtains, Set of 12 Hooks - Nickel\n33. 12 Pcs Small American Flags On Stick,Patriotic Decorations Small USA Flags On Stick\uff0cMini American 4&#39;&#39;x6&#39;&#39; Flag, Fourth Of July Flags For Outside Patriotic Holiday Yard Patio,Labor Day Decorations\n34. SafeRest Waterproof Queen Size Mattress Protector - Fitted with Stretchable Pockets - Machine Washable Cotton Mattress Cover for Bed\n35. Intex 64417ED 22in Queen Dura-Beam Comfort Plush High-Rise Inflatable Air Mattress with Built in Pump for Travel and Camping, 600lb Weight Capacity\n36. Utopia Bedding Comforter Duvet Insert, Quilted Comforter with Corner Tabs, Box Stitched Down Alternative Comforters Queen Size (White)\n37. Raid Ant Killer Baits, Child Resistant Bug Killer for Indoor Home Use, 0.24 Oz, 8 Count\n38. Cisily Black Sponge Holder for Kitchen Sink, Sink Caddy Organizer with High Brush Holder, Kitchen Countertop Organizers and Storage Essentials, Rustproof 304 Stainless Steel, Soap Dispenser Organize\n39. Zulay Kitchen Powerful Milk Frother Wand With 2 Duracell Batteries - Ultra Fast Handheld Drink Mixer - Electric Whisk Foam Maker for Coffee, Lattes, Cappuccino, Matcha, Hot Chocolate &amp; Creamer - Black\n40. 2 Pack Blue Streamers Party Decorations Fringe Backdrop Ocean Themed Decorations Foil Curtain Backdrop Blue Birthday Ocean Party Decor Supplies\n41. Advion Cockroach Gel Bait, 4 Tubes x 30-Grams, 1 Plunger and 2 Tips, German Roach Insect Pest Control, Indoor and Outdoor Use, Roach Killer Gel for American, German and Other Major Cockroach Species\n42. Rabenda 12 Pcs Rug Tape, Non Slip Rug Pads Grippers for Hardwood Floors and Tiles, Reusable Carpet Tape for Area Rugs, Double-Sided Adhesive Rug Stickers Keep Corners Flat (Black)\n43. ThermoPro TP19H Digital Meat Thermometer for Cooking with Ambidextrous Backlit and Motion Sensing Kitchen Cooking Food Thermometer for BBQ Grill Smoker Oil Fry Candy Instant Read Thermometer\n44. Amazon Basics 14x20x1 Air Filter 6 Pack, MERV 8 AC Furnace Filters (Actual Size: 13.75 x 19.75 x .75)\n45. Mellanni Queen Sheets Set - 4 PC Iconic Collection Bedding - Hotel Luxury, Extra Soft, Cooling Bed Sheets - Wrinkle, Fade, Stain Resistant (Queen, White)\n46. LEVOIT Air Purifier for Home Allergies Pet Hair in Bedroom, Covers Up to 1074 ft\u00b2 by 56W High Torque Motor, AHAM VERIFIDE, 3-in-1 Filter with HEPA Sleep Mode, Remove Dust Smoke Odor, Core300-P, White\n1. Roundup Weed and Grass Killer\u2084 with Pump &#39;N Go 2 Sprayer, Use in and Around Flower Beds, Trees &amp; More, 1.33 gal.\n2. Coffee Machine Cleaner Descaler Tablets - 24 Count, Compatible With Nespresso, Keurig, Ninja, Delonghi, Miele, Coffee Maker Pot Descaling &amp; Cleaning Tabs, Descale Drip Coffe And Espresso Machines\n3. Gaiatop Mini Portable Fan, Small and Powerful, Cute Design 3 Speed Personal Handheld fan and Desktop with Base, Lightweight USB Rechargeable for Travel Lash Makeup Girl Women Summer Gift Pink\n4. Mrs Awesome Clear Shower Curtain Liner with 3 Magnets, 72x72 Premium Flexible Sturdy Plastic Shower Curtain for Bathroom Lightweight, Waterproof, Clear\n5. American Soft Linen Luxury Washcloths for Bathroom, 600 GSM 100% Cotton 4 Piece Turkish Wash Cloth Set, 13x13 in Soft Rags for Body and Face, White Washcloths\n6. EUDELE Adhesive Shower Caddy, 5 Pack Rustproof Stainless Steel Bath Organizers With Large Capacity, No Drilling Shelves for Bathroom Storage &amp; Home Decor\n7. Hefty Party On Disposable Plastic Cups, Assorted, 16 Ounce, 100 Count\n8. LEVOIT Air Purifiers for Bedroom Home, 3-in-1 Filter Cleaner with Fragrance Sponge for Better Sleep, Filters Smoke, Allergies, Pet Dander, Odor, Dust, Office, Desktop, Portable, Core Mini-P, White\n9. Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel\n10. 20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and Blankets, Sealer Clothes Storage, Hand Pump Included\n11. Thermacell Rechargeable Mosquito Repeller Refills; Advanced Repellent Formula Provides 20 Foot Protection Zone; Compatible with Thermacell E-Series &amp; Radius Only; No DEET, Spray or Flame\n12. Shark Upright Vacuum, Navigator Lift-Away Deluxe with Large Dust Cup Capacity, HEPA Filter, Swivel Steering, Upholstery Tool &amp; Crevice Tool, Blue, NV360\n13. Utopia Home - Plastic Hangers 50 Pack - Perfect Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage Makes It Ideal Dorm Room Essentials for Girls or Guys (White)\n14. Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green\n15. Ortho Home Defense Max Indoor Insect Barrier with Extended Reach Comfort Wand, Kills Ants, Roaches, Spiders, Fleas and Ticks, 1 gal.\n16. TUNISE Portable Handheld Fan, 4000mAh, 180 Adjustable, 6 Speed Wind, Display Electricity in Real Time, USB Rechargeable Foldable Personal Fan\n17. EASYTEST 7-Way Pool Test Strips, 150 Strips Water Chemical Testing for Hot tub and Spa, Accurate Test Bromine, Total Alkalinity, pH, Free Chlorine, Total Hardness, Cyanuric Acid, and Total Chlorine\n18. ZINUS 5 Inch Green Tea Memory Foam Mattress [New Version], Twin, Fiberglass free, Medium Firm Feel, Zoned Pressure Relief, Certified Safe Foams &amp; Fabric, Mattress in A Box\n19. Bedsure Comforter Duvet Insert - Quilted Comforters Queen Size, All Season Duvet, Down Alternative Bedding, with 8 Tabs, Gifts for Women/Men, White, Queen 88 x 88 Inches\n20. OLANLY Bathroom Rugs Mat 30x20, Extra Soft Absorbent Microfiber Bath Rugs, Rubber Backing, Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. AUTOMAN-Garden-Hose-Nozzle, ABS Water Spray Nozzle with 7 Adjustable Watering Patterns, Slip Resistant for Watering Plants, Lawn&amp; Garden, Washing Cars, Cleaning, Showering Pets &amp; Outdoor Fun.\n22. NICETOWN Halloween Pitch Black Solid Thermal Insulated Grommet Blackout Curtains/Drapes for Bedroom Window (2 Panels, 42 inches Wide by 63 inches Long, Black)\n23. Amazon Basics 16\&#34; Pedestal Fan with Remote, Floor Fan, Standing Fan for Bedroom, Living Room, Office, with 3 Speeds, 3 Modes, Timer, Dual-Layered Blades, Adjustable Height, Tilt Head, 60W, Black\n24. napfun Neck Pillow for Traveling, Upgraded Travel Neck Pillow for Airplane 100% Pure Memory Foam Travel Pillow for Flight Headrest Sleep, Portable Plane Accessories, Light Grey\n25. HOOSUN 4th Of July Decorations,American Flag Bunting for Outside,3x6 FT Fourth of July Bunting Patriotic Decorations,Red White and Blue USA Flags Pleated Fan Flag,American Flags Banners for Porch\n26. Miracle-Gro Water Soluble All Purpose Plant Food, Fertilizer for Indoor or Outdoor Flowers, Vegetables or Trees, 3 lbs.\n27. 6 Pack Extra Heavy Duty Large Moving Bags with Strong Zipper &amp; Comfortable Handles, Sturdy &amp; Durable Clothes Storage Bags Totes Bins, Blue Packing Moving Boxes for College Supplies, Dark Blue\n28. YASONIC Shower Caddy, 6 Pack Large Capacity shower Organizer with Soap Holder and 12 Hooks, Rustproof Shower Shelves for Inside Shower, No Drilling&amp;Sleek Bathroom Organizers and Storage\n29. Amazon Echo Show 5 (newest model), Smart display with 2x the bass and clearer sound, Charcoal\n30. Vtopmart 25 PCS Clear Plastic Drawer Organizers Set, 4-Size Versatile Bathroom and Vanity Drawer Organizer Trays, Storage Bins for Makeup, Bedroom, Kitchen Gadgets Utensils and Office\n31. AmazerBath Shower Curtain Liner, 72x72 Clear Shower Curtain Liner, Waterproof Plastic Shower Liner, Cute Lightweight PEVA Shower Curtain for Bathroom with 3 Magnets and 12 Rustproof Metal Grommets\n32. Titanker Shower Curtain Hooks Rings, Rust Resistant Metal Double Glide Shower Hooks Rings for Bathroom Shower Rods Curtains, Set of 12 Hooks - Nickel\n33. 12 Pcs Small American Flags On Stick,Patriotic Decorations Small USA Flags On Stick\uff0cMini American 4&#39;&#39;x6&#39;&#39; Flag, Fourth Of July Flags For Outside Patriotic Holiday Yard Patio,Labor Day Decorations\n34. SafeRest Waterproof Queen Size Mattress Protector - Fitted with Stretchable Pockets - Machine Washable Cotton Mattress Cover for Bed\n35. Intex 64417ED 22in Queen Dura-Beam Comfort Plush High-Rise Inflatable Air Mattress with Built in Pump for Travel and Camping, 600lb Weight Capacity\n36. Utopia Bedding Comforter Duvet Insert, Quilted Comforter with Corner Tabs, Box Stitched Down Alternative Comforters Queen Size (White)\n37. Raid Ant Killer Baits, Child Resistant Bug Killer for Indoor Home Use, 0.24 Oz, 8 Count\n38. Cisily Black Sponge Holder for Kitchen Sink, Sink Caddy Organizer with High Brush Holder, Kitchen Countertop Organizers and Storage Essentials, Rustproof 304 Stainless Steel, Soap Dispenser Organize\n39. Zulay Kitchen Powerful Milk Frother Wand With 2 Duracell Batteries - Ultra Fast Handheld Drink Mixer - Electric Whisk Foam Maker for Coffee, Lattes, Cappuccino, Matcha, Hot Chocolate &amp; Creamer - Black\n40. 2 Pack Blue Streamers Party Decorations Fringe Backdrop Ocean Themed Decorations Foil Curtain Backdrop Blue Birthday Ocean Party Decor Supplies\n41. Advion Cockroach Gel Bait, 4 Tubes x 30-Grams, 1 Plunger and 2 Tips, German Roach Insect Pest Control, Indoor and Outdoor Use, Roach Killer Gel for American, German and Other Major Cockroach Species\n42. Rabenda 12 Pcs Rug Tape, Non Slip Rug Pads Grippers for Hardwood Floors and Tiles, Reusable Carpet Tape for Area Rugs, Double-Sided Adhesive Rug Stickers Keep Corners Flat (Black)\n43. ThermoPro TP19H Digital Meat Thermometer for Cooking with Ambidextrous Backlit and Motion Sensing Kitchen Cooking Food Thermometer for BBQ Grill Smoker Oil Fry Candy Instant Read Thermometer\n44. Amazon Basics 14x20x1 Air Filter 6 Pack, MERV 8 AC Furnace Filters (Actual Size: 13.75 x 19.75 x .75)\n45. Mellanni Queen Sheets Set - 4 PC Iconic Collection Bedding - Hotel Luxury, Extra Soft, Cooling Bed Sheets - Wrinkle, Fade, Stain Resistant (Queen, White)\n46. LEVOIT Air Purifier for Home Allergies Pet Hair in Bedroom, Covers Up to 1074 ft\u00b2 by 56W High Torque Motor, AHAM VERIFIDE, 3-in-1 Filter with HEPA Sleep Mode, Remove Dust Smoke Odor, Core300-P, White\n47. Dynamene Sage Green Shower Curtain - Waffle Textured Heavy Duty Thick Fabric Shower Curtains for Bathroom, 256GSM Luxury Weighted Polyester Cloth Bath Curtain Set with 12 Plastic Hooks\uff0c72Wx72H,Green\n48. 12 Pcs Small American Flags on Stick, 6x4 In 4th of July Decorations, Mini Patriotic USA Flag, Fourth of July Decorations, Hand Held July 4th Flag for Independence Day Supplies Favor Accessories\n49. LINENSPA Memory Foam Mattress Topper - 2 Inch Gel Infused Memory Foam - Plush Feel - Cooling and Pressure Relieving - CertiPUR Certified - Dorm Room Essentials - Queen Size\n50. FrSara Neck Fan, Portable Personal Fan Strong Wind, 5200mAh, Air Volume,360\u00b0 Cooling, No Hair Twisting, Air Volume On 2 Sides, Non-Slip, Quick Charge, Long Use Time, Gift for Father, Dad, Women\n1. Roundup Weed and Grass Killer\u2084 with Pump &#39;N Go 2 Sprayer, Use in and Around Flower Beds, Trees &amp; More, 1.33 gal.\n2. Coffee Machine Cleaner Descaler Tablets - 24 Count, Compatible With Nespresso, Keurig, Ninja, Delonghi, Miele, Coffee Maker Pot Descaling &amp; Cleaning Tabs, Descale Drip Coffe And Espresso Machines\n3. Gaiatop Mini Portable Fan, Small and Powerful, Cute Design 3 Speed Personal Handheld fan and Desktop with Base, Lightweight USB Rechargeable for Travel Lash Makeup Girl Women Summer Gift Pink\n4. Mrs Awesome Clear Shower Curtain Liner with 3 Magnets, 72x72 Premium Flexible Sturdy Plastic Shower Curtain for Bathroom Lightweight, Waterproof, Clear\n5. American Soft Linen Luxury Washcloths for Bathroom, 600 GSM 100% Cotton 4 Piece Turkish Wash Cloth Set, 13x13 in Soft Rags for Body and Face, White Washcloths\n6. EUDELE Adhesive Shower Caddy, 5 Pack Rustproof Stainless Steel Bath Organizers With Large Capacity, No Drilling Shelves for Bathroom Storage &amp; Home Decor\n7. Hefty Party On Disposable Plastic Cups, Assorted, 16 Ounce, 100 Count\n8. LEVOIT Air Purifiers for Bedroom Home, 3-in-1 Filter Cleaner with Fragrance Sponge for Better Sleep, Filters Smoke, Allergies, Pet Dander, Odor, Dust, Office, Desktop, Portable, Core Mini-P, White\n9. Etekcity Food Kitchen Scale, Digital Grams and Ounces for Weight Loss, Baking, Cooking, Keto and Meal Prep, LCD Display, Medium, 304 Stainless Steel\n10. 20 Pack Vacuum Storage Bags, Space Saver Bags (4 Jumbo/4 Large/4 Medium/4 Small/4 Roll) Compression for Comforters and Blankets, Sealer Clothes Storage, Hand Pump Included\n11. Thermacell Rechargeable Mosquito Repeller Refills; Advanced Repellent Formula Provides 20 Foot Protection Zone; Compatible with Thermacell E-Series &amp; Radius Only; No DEET, Spray or Flame\n12. Shark Upright Vacuum, Navigator Lift-Away Deluxe with Large Dust Cup Capacity, HEPA Filter, Swivel Steering, Upholstery Tool &amp; Crevice Tool, Blue, NV360\n13. Utopia Home - Plastic Hangers 50 Pack - Perfect Space Saving Clothes Hanger - Durable and Strong Closet Organizers and Storage Makes It Ideal Dorm Room Essentials for Girls or Guys (White)\n14. Ultra Soft Queen Size Mattress Topper - Viscose Made from Bamboo Pillow Top Mattress Pad for Back Pain Relief - Naturally Cooling for Hot Sleepers, Green\n15. Ortho Home Defense Max Indoor Insect Barrier with Extended Reach Comfort Wand, Kills Ants, Roaches, Spiders, Fleas and Ticks, 1 gal.\n16. TUNISE Portable Handheld Fan, 4000mAh, 180 Adjustable, 6 Speed Wind, Display Electricity in Real Time, USB Rechargeable Foldable Personal Fan\n17. EASYTEST 7-Way Pool Test Strips, 150 Strips Water Chemical Testing for Hot tub and Spa, Accurate Test Bromine, Total Alkalinity, pH, Free Chlorine, Total Hardness, Cyanuric Acid, and Total Chlorine\n18. ZINUS 5 Inch Green Tea Memory Foam Mattress [New Version], Twin, Fiberglass free, Medium Firm Feel, Zoned Pressure Relief, Certified Safe Foams &amp; Fabric, Mattress in A Box\n19. Bedsure Comforter Duvet Insert - Quilted Comforters Queen Size, All Season Duvet, Down Alternative Bedding, with 8 Tabs, Gifts for Women/Men, White, Queen 88 x 88 Inches\n20. OLANLY Bathroom Rugs Mat 30x20, Extra Soft Absorbent Microfiber Bath Rugs, Rubber Backing, Quick Dry, Machine Washable Bath Mats for Bathroom Floor, Tub and Shower, Home Decor Accessories, Grey\n21. AUTOMAN-Garden-Hose-Nozzle, ABS Water Spray Nozzle with 7 Adjustable Watering Patterns, Slip Resistant for Watering Plants, Lawn&amp; Garden, Washing Cars, Cleaning, Showering Pets &amp; Outdoor Fun.\n22. NICETOWN Halloween Pitch Black Solid Thermal Insulated Grommet Blackout Curtains/Drapes for Bedroom Window (2 Panels, 42 inches Wide by 63 inches Long, Black)\n23. Amazon Basics 16\&#34; Pedestal Fan with Remote, Floor Fan, Standing Fan for Bedroom, Living Room, Office, with 3 Speeds, 3 Modes, Timer, Dual-Layered Blades, Adjustable Height, Tilt Head, 60W, Black\n24. napfun Neck Pillow for Traveling, Upgraded Travel Neck Pillow for Airplane 100% Pure Memory Foam Travel Pillow for Flight Headrest Sleep, Portable Plane Accessories, Light Grey\n25. HOOSUN 4th Of July Decorations,American Flag Bunting for Outside,3x6 FT Fourth of July Bunting Patriotic Decorations,Red White and Blue USA Flags Pleated Fan Flag,American Flags Banners for Porch\n26. Miracle-Gro Water Soluble All Purpose Plant Food, Fertilizer for Indoor or Outdoor Flowers, Vegetables or Trees, 3 lbs.\n27. 6 Pack Extra Heavy Duty Large Moving Bags with Strong Zipper &amp; Comfortable Handles, Sturdy &amp; Durable Clothes Storage Bags Totes Bins, Blue Packing Moving Boxes for College Supplies, Dark Blue\n28. YASONIC Shower Caddy, 6 Pack Large Capacity shower Organizer with Soap Holder and 12 Hooks, Rustproof Shower Shelves for Inside Shower, No Drilling&amp;Sleek Bathroom Organizers and Storage\n29. Amazon Echo Show 5 (newest model), Smart display with 2x the bass and clearer sound, Charcoal\n30. Vtopmart 25 PCS Clear Plastic Drawer Organizers Set, 4-Size Versatile Bathroom and Vanity Drawer Organizer Trays, Storage Bins for Makeup, Bedroom, Kitchen Gadgets Utensils and Office\n31. AmazerBath Shower Curtain Liner, 72x72 Clear Shower Curtain Liner, Waterproof Plastic Shower Liner, Cute Lightweight PEVA Shower Curtain for Bathroom with 3 Magnets and 12 Rustproof Metal Grommets\n32. Titanker Shower Curtain Hooks Rings, Rust Resistant Metal Double Glide Shower Hooks Rings for Bathroom Shower Rods Curtains, Set of 12 Hooks - Nickel\n33. 12 Pcs Small American Flags On Stick,Patriotic Decorations Small USA Flags On Stick\uff0cMini American 4&#39;&#39;x6&#39;&#39; Flag, Fourth Of July Flags For Outside Patriotic Holiday Yard Patio,Labor Day Decorations\n34. SafeRest Waterproof Queen Size Mattress Protector - Fitted with Stretchable Pockets - Machine Washable Cotton Mattress Cover for Bed\n35. Intex 64417ED 22in Queen Dura-Beam Comfort Plush High-Rise Inflatable Air Mattress with Built in Pump for Travel and Camping, 600lb Weight Capacity\n36. Utopia Bedding Comforter Duvet Insert, Quilted Comforter with Corner Tabs, Box Stitched Down Alternative Comforters Queen Size (White)\n37. Raid Ant Killer Baits, Child Resistant Bug Killer for Indoor Home Use, 0.24 Oz, 8 Count\n38. Cisily Black Sponge Holder for Kitchen Sink, Sink Caddy Organizer with High Brush Holder, Kitchen Countertop Organizers and Storage Essentials, Rustproof 304 Stainless Steel, Soap Dispenser Organize\n39. Zulay Kitchen Powerful Milk Frother Wand With 2 Duracell Batteries - Ultra Fast Handheld Drink Mixer - Electric Whisk Foam Maker for Coffee, Lattes, Cappuccino, Matcha, Hot Chocolate &amp; Creamer - Black\n40. 2 Pack Blue Streamers Party Decorations Fringe Backdrop Ocean Themed Decorations Foil Curtain Backdrop Blue Birthday Ocean Party Decor Supplies\n41. Advion Cockroach Gel Bait, 4 Tubes x 30-Grams, 1 Plunger and 2 Tips, German Roach Insect Pest Control, Indoor and Outdoor Use, Roach Killer Gel for American, German and Other Major Cockroach Species\n42. Rabenda 12 Pcs Rug Tape, Non Slip Rug Pads Grippers for Hardwood Floors and Tiles, Reusable Carpet Tape for Area Rugs, Double-Sided Adhesive Rug Stickers Keep Corners Flat (Black)\n43. ThermoPro TP19H Digital Meat Thermometer for Cooking with Ambidextrous Backlit and Motion Sensing Kitchen Cooking Food Thermometer for BBQ Grill Smoker Oil Fry Candy Instant Read Thermometer\n44. Amazon Basics 14x20x1 Air Filter 6 Pack, MERV 8 AC Furnace Filters (Actual Size: 13.75 x 19.75 x .75)\n45. Mellanni Queen Sheets Set - 4 PC Iconic Collection Bedding - Hotel Luxury, Extra Soft, Cooling Bed Sheets - Wrinkle, Fade, Stain Resistant (Queen, White)\n46. LEVOIT Air Purifier for Home Allergies Pet Hair in Bedroom, Covers Up to 1074 ft\u00b2 by 56W High Torque Motor, AHAM VERIFIDE, 3-in-1 Filter with HEPA Sleep Mode, Remove Dust Smoke Odor, Core300-P, White\n47. Dynamene Sage Green Shower Curtain - Waffle Textured Heavy Duty Thick Fabric Shower Curtains for Bathroom, 256GSM Luxury Weighted Polyester Cloth Bath Curtain Set with 12 Plastic Hooks\uff0c72Wx72H,Green\n48. 12 Pcs Small American Flags on Stick, 6x4 In 4th of July Decorations, Mini Patriotic USA Flag, Fourth of July Decorations, Hand Held July 4th Flag for Independence Day Supplies Favor Accessories\n49. LINENSPA Memory Foam Mattress Topper - 2 Inch Gel Infused Memory Foam - Plush Feel - Cooling and Pressure Relieving - CertiPUR Certified - Dorm Room Essentials - Queen Size\n50. FrSara Neck Fan, Portable Personal Fan Strong Wind, 5200mAh, Air Volume,360\u00b0 Cooling, No Hair Twisting, Air Volume On 2 Sides, Non-Slip, Quick Charge, Long Use Time, Gift for Father, Dad, Women\n100 links found\n--------------------------- Captured stdout teardown ---------------------------\n\n=&gt; Fail Page: https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden/ref=zg_bs_pg_3_home-garden?_encoding=UTF8&amp;pg=3\n&#34;}]}, &#34;renderCollapsed&#34;: [&#34;passed&#34;], &#34;initialSort&#34;: &#34;result&#34;, &#34;title&#34;: &#34;report.html&#34;}"></div>
+    <script>
+      (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+const { getCollapsedCategory, setCollapsedIds } = require('./storage.js')
+
+class DataManager {
+    setManager(data) {
+        const collapsedCategories = [...getCollapsedCategory(data.renderCollapsed)]
+        const collapsedIds = []
+        const tests = Object.values(data.tests).flat().map((test, index) => {
+            const collapsed = collapsedCategories.includes(test.result.toLowerCase())
+            const id = `test_${index}`
+            if (collapsed) {
+                collapsedIds.push(id)
+            }
+            return {
+                ...test,
+                id,
+                collapsed,
+            }
+        })
+        const dataBlob = { ...data, tests }
+        this.data = { ...dataBlob }
+        this.renderData = { ...dataBlob }
+        setCollapsedIds(collapsedIds)
+    }
+
+    get allData() {
+        return { ...this.data }
+    }
+
+    resetRender() {
+        this.renderData = { ...this.data }
+    }
+
+    setRender(data) {
+        this.renderData.tests = [...data]
+    }
+
+    toggleCollapsedItem(id) {
+        this.renderData.tests = this.renderData.tests.map((test) =>
+            test.id === id ? { ...test, collapsed: !test.collapsed } : test,
+        )
+    }
+
+    set allCollapsed(collapsed) {
+        this.renderData = { ...this.renderData, tests: [...this.renderData.tests.map((test) => (
+            { ...test, collapsed }
+        ))] }
+    }
+
+    get testSubset() {
+        return [...this.renderData.tests]
+    }
+
+    get environment() {
+        return this.renderData.environment
+    }
+
+    get initialSort() {
+        return this.data.initialSort
+    }
+}
+
+module.exports = {
+    manager: new DataManager(),
+}
+
+},{"./storage.js":8}],2:[function(require,module,exports){
+const mediaViewer = require('./mediaviewer.js')
+const templateEnvRow = document.getElementById('template_environment_row')
+const templateResult = document.getElementById('template_results-table__tbody')
+
+function htmlToElements(html) {
+    const temp = document.createElement('template')
+    temp.innerHTML = html
+    return temp.content.childNodes
+}
+
+const find = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return elem.querySelector(selector)
+}
+
+const findAll = (selector, elem) => {
+    if (!elem) {
+        elem = document
+    }
+    return [...elem.querySelectorAll(selector)]
+}
+
+const dom = {
+    getStaticRow: (key, value) => {
+        const envRow = templateEnvRow.content.cloneNode(true)
+        const isObj = typeof value === 'object' && value !== null
+        const values = isObj ? Object.keys(value).map((k) => `${k}: ${value[k]}`) : null
+
+        const valuesElement = htmlToElements(
+            values ? `${values.map((val) => `${val},&nbsp;&nbsp;`).join('')}` : `<span>${value}</span`)[0]
+        const td = findAll('td', envRow)
+        td[0].textContent = key
+        td[1].appendChild(valuesElement)
+
+        return envRow
+    },
+    getResultTBody: ({ testId, id, log, extras, resultsTableRow, tableHtml, result, collapsed }) => {
+        const resultBody = templateResult.content.cloneNode(true)
+        resultBody.querySelector('tbody').classList.add(result.toLowerCase())
+        resultBody.querySelector('tbody').id = testId
+        resultBody.querySelector('.collapsible').dataset.id = id
+
+        resultsTableRow.forEach((html) => {
+            const t = document.createElement('template')
+            t.innerHTML = html
+            resultBody.querySelector('.collapsible').appendChild(t.content)
+        })
+
+        if (log) {
+            // Wrap lines starting with "E" with span.error to color those lines red
+            const wrappedLog = log.replace(/^E.*$/gm, (match) => `<span class="error">${match}</span>`)
+            resultBody.querySelector('.log').innerHTML = wrappedLog
+        } else {
+            resultBody.querySelector('.log').remove()
+        }
+
+        if (collapsed) {
+            resultBody.querySelector('.collapsible > td')?.classList.add('collapsed')
+            resultBody.querySelector('.extras-row').classList.add('hidden')
+        } else {
+            resultBody.querySelector('.collapsible > td')?.classList.remove('collapsed')
+        }
+
+        const media = []
+        extras?.forEach(({ name, format_type, content }) => {
+            if (['image', 'video'].includes(format_type)) {
+                media.push({ path: content, name, format_type })
+            }
+
+            if (format_type === 'html') {
+                resultBody.querySelector('.extraHTML').insertAdjacentHTML('beforeend', `<div>${content}</div>`)
+            }
+        })
+        mediaViewer.setup(resultBody, media)
+
+        // Add custom html from the pytest_html_results_table_html hook
+        tableHtml?.forEach((item) => {
+            resultBody.querySelector('td[class="extra"]').insertAdjacentHTML('beforeend', item)
+        })
+
+        return resultBody
+    },
+}
+
+module.exports = {
+    dom,
+    htmlToElements,
+    find,
+    findAll,
+}
+
+},{"./mediaviewer.js":6}],3:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const storageModule = require('./storage.js')
+
+const getFilteredSubSet = (filter) =>
+    manager.allData.tests.filter(({ result }) => filter.includes(result.toLowerCase()))
+
+const doInitFilter = () => {
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+}
+
+const doFilter = (type, show) => {
+    if (show) {
+        storageModule.showCategory(type)
+    } else {
+        storageModule.hideCategory(type)
+    }
+
+    const currentFilter = storageModule.getVisible()
+    const filteredSubset = getFilteredSubSet(currentFilter)
+    manager.setRender(filteredSubset)
+
+    const sortColumn = storageModule.getSort()
+    doSort(sortColumn, true)
+}
+
+module.exports = {
+    doFilter,
+    doInitFilter,
+}
+
+},{"./datamanager.js":1,"./sort.js":7,"./storage.js":8}],4:[function(require,module,exports){
+const { redraw, bindEvents, renderStatic } = require('./main.js')
+const { doInitFilter } = require('./filter.js')
+const { doInitSort } = require('./sort.js')
+const { manager } = require('./datamanager.js')
+const data = JSON.parse(document.getElementById('data-container').dataset.jsonblob)
+
+function init() {
+    manager.setManager(data)
+    doInitFilter()
+    doInitSort()
+    renderStatic()
+    redraw()
+    bindEvents()
+}
+
+init()
+
+},{"./datamanager.js":1,"./filter.js":3,"./main.js":5,"./sort.js":7}],5:[function(require,module,exports){
+const { dom, find, findAll } = require('./dom.js')
+const { manager } = require('./datamanager.js')
+const { doSort } = require('./sort.js')
+const { doFilter } = require('./filter.js')
+const {
+    getVisible,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    getSortDirection,
+    possibleFilters,
+} = require('./storage.js')
+
+const removeChildren = (node) => {
+    while (node.firstChild) {
+        node.removeChild(node.firstChild)
+    }
+}
+
+const renderStatic = () => {
+    const renderEnvironmentTable = () => {
+        const environment = manager.environment
+        const rows = Object.keys(environment).map((key) => dom.getStaticRow(key, environment[key]))
+        const table = document.getElementById('environment')
+        removeChildren(table)
+        rows.forEach((row) => table.appendChild(row))
+    }
+    renderEnvironmentTable()
+}
+
+const addItemToggleListener = (elem) => {
+    elem.addEventListener('click', ({ target }) => {
+        const id = target.parentElement.dataset.id
+        manager.toggleCollapsedItem(id)
+
+        const collapsedIds = getCollapsedIds()
+        if (collapsedIds.includes(id)) {
+            const updated = collapsedIds.filter((item) => item !== id)
+            setCollapsedIds(updated)
+        } else {
+            collapsedIds.push(id)
+            setCollapsedIds(collapsedIds)
+        }
+        redraw()
+    })
+}
+
+const renderContent = (tests) => {
+    const sortAttr = getSort(manager.initialSort)
+    const sortAsc = JSON.parse(getSortDirection())
+    const rows = tests.map(dom.getResultTBody)
+    const table = document.getElementById('results-table')
+    const tableHeader = document.getElementById('results-table-head')
+
+    const newTable = document.createElement('table')
+    newTable.id = 'results-table'
+
+    // remove all sorting classes and set the relevant
+    findAll('.sortable', tableHeader).forEach((elem) => elem.classList.remove('asc', 'desc'))
+    tableHeader.querySelector(`.sortable[data-column-type="${sortAttr}"]`).classList.add(sortAsc ? 'desc' : 'asc')
+    newTable.appendChild(tableHeader)
+
+    if (!rows.length) {
+        const emptyTable = document.getElementById('template_results-table__body--empty').content.cloneNode(true)
+        newTable.appendChild(emptyTable)
+    } else {
+        rows.forEach((row) => {
+            if (!!row) {
+                //findAll('.collapsible td:not(.col-links', row).forEach(addItemToggleListener)
+                find('.logexpander', row).addEventListener('click',
+                    (evt) => evt.target.parentNode.classList.toggle('expanded'),
+                )
+                newTable.appendChild(row)
+            }
+        })
+    }
+
+    table.replaceWith(newTable)
+}
+
+const renderDerived = () => {
+    const currentFilter = getVisible()
+    possibleFilters.forEach((result) => {
+        const input = document.querySelector(`input[data-test-result="${result}"]`)
+        input.checked = currentFilter.includes(result)
+    })
+}
+
+const bindEvents = () => {
+    const filterColumn = (evt) => {
+        const { target: element } = evt
+        const { testResult } = element.dataset
+
+        doFilter(testResult, element.checked)
+        const collapsedIds = getCollapsedIds()
+        const updated = manager.renderData.tests.map((test) => {
+            return {
+                ...test,
+                collapsed: collapsedIds.includes(test.id),
+            }
+        })
+        manager.setRender(updated)
+        redraw()
+    }
+
+    const header = document.getElementById('environment-header')
+    header.addEventListener('click', () => {
+        const table = document.getElementById('environment')
+        table.classList.toggle('hidden')
+        header.classList.toggle('collapsed')
+    })
+
+    findAll('input[name="filter_checkbox"]').forEach((elem) => {
+        elem.addEventListener('click', filterColumn)
+    })
+
+    findAll('.sortable').forEach((elem) => {
+        elem.addEventListener('click', (evt) => {
+            const { target: element } = evt
+            const { columnType } = element.dataset
+            doSort(columnType)
+            redraw()
+        })
+    })
+
+    document.getElementById('show_all_details').addEventListener('click', () => {
+        manager.allCollapsed = false
+        setCollapsedIds([])
+        redraw()
+    })
+    document.getElementById('hide_all_details').addEventListener('click', () => {
+        manager.allCollapsed = true
+        const allIds = manager.renderData.tests.map((test) => test.id)
+        setCollapsedIds(allIds)
+        redraw()
+    })
+}
+
+const redraw = () => {
+    const { testSubset } = manager
+
+    renderContent(testSubset)
+    renderDerived()
+}
+
+module.exports = {
+    redraw,
+    bindEvents,
+    renderStatic,
+}
+
+},{"./datamanager.js":1,"./dom.js":2,"./filter.js":3,"./sort.js":7,"./storage.js":8}],6:[function(require,module,exports){
+class MediaViewer {
+    constructor(assets) {
+        this.assets = assets
+        this.index = 0
+    }
+
+    nextActive() {
+        this.index = this.index === this.assets.length - 1 ? 0 : this.index + 1
+        return [this.activeFile, this.index]
+    }
+
+    prevActive() {
+        this.index = this.index === 0 ? this.assets.length - 1 : this.index -1
+        return [this.activeFile, this.index]
+    }
+
+    get currentIndex() {
+        return this.index
+    }
+
+    get activeFile() {
+        return this.assets[this.index]
+    }
+}
+
+
+const setup = (resultBody, assets) => {
+    if (!assets.length) {
+        resultBody.querySelector('.media').classList.add('hidden')
+        return
+    }
+
+    const mediaViewer = new MediaViewer(assets)
+    const container = resultBody.querySelector('.media-container')
+    const leftArrow = resultBody.querySelector('.media-container__nav--left')
+    const rightArrow = resultBody.querySelector('.media-container__nav--right')
+    const mediaName = resultBody.querySelector('.media__name')
+    const counter = resultBody.querySelector('.media__counter')
+    const imageEl = resultBody.querySelector('img')
+    const sourceEl = resultBody.querySelector('source')
+    const videoEl = resultBody.querySelector('video')
+
+    const setImg = (media, index) => {
+        if (media?.format_type === 'image') {
+            imageEl.src = media.path
+
+            imageEl.classList.remove('hidden')
+            videoEl.classList.add('hidden')
+        } else if (media?.format_type === 'video') {
+            sourceEl.src = media.path
+
+            videoEl.classList.remove('hidden')
+            imageEl.classList.add('hidden')
+        }
+
+        //mediaName.innerText = media?.name
+        //counter.innerText = `${index + 1} / ${assets.length}`
+    }
+    setImg(mediaViewer.activeFile, mediaViewer.currentIndex)
+
+    const moveLeft = () => {
+        const [media, index] = mediaViewer.prevActive()
+        setImg(media, index)
+    }
+    const doRight = () => {
+        const [media, index] = mediaViewer.nextActive()
+        setImg(media, index)
+    }
+    const openImg = () => {
+        window.open(mediaViewer.activeFile.path, '_blank')
+    }
+    if (assets.length === 1) { container.classList.remove('media-container')
+        container.classList.add('media-container--fullscreen')
+    } else {
+        leftArrow.addEventListener('click', moveLeft)
+        rightArrow.addEventListener('click', doRight)
+    }
+    imageEl.addEventListener('click', openImg)
+}
+
+module.exports = {
+    setup,
+}
+
+},{}],7:[function(require,module,exports){
+const { manager } = require('./datamanager.js')
+const storageModule = require('./storage.js')
+
+const genericSort = (list, key, ascending, customOrder) => {
+    let sorted
+    if (customOrder) {
+        sorted = list.sort((a, b) => {
+            const aValue = a.result.toLowerCase()
+            const bValue = b.result.toLowerCase()
+
+            const aIndex = customOrder.findIndex((item) => item.toLowerCase() === aValue)
+            const bIndex = customOrder.findIndex((item) => item.toLowerCase() === bValue)
+
+            // Compare the indices to determine the sort order
+            return aIndex - bIndex
+        })
+    } else {
+        sorted = list.sort((a, b) => a[key] === b[key] ? 0 : a[key] > b[key] ? 1 : -1)
+    }
+
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const durationSort = (list, ascending) => {
+    const parseDuration = (duration) => {
+        if (duration.includes(':')) {
+            // If it's in the format "HH:mm:ss"
+            const [hours, minutes, seconds] = duration.split(':').map(Number)
+            return (hours * 3600 + minutes * 60 + seconds) * 1000
+        } else {
+            // If it's in the format "nnn ms"
+            return parseInt(duration)
+        }
+    }
+    const sorted = list.sort((a, b) => parseDuration(a['duration']) - parseDuration(b['duration']))
+    if (ascending) {
+        sorted.reverse()
+    }
+    return sorted
+}
+
+const doInitSort = () => {
+    const type = storageModule.getSort(manager.initialSort)
+    const ascending = storageModule.getSortDirection()
+    const list = manager.testSubset
+    const initialOrder = ['Error', 'Failed', 'Rerun', 'XFailed', 'XPassed', 'Skipped', 'Passed']
+
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    if (type?.toLowerCase() === 'original') {
+        manager.setRender(list)
+    } else {
+        let sortedList
+        switch (type) {
+        case 'duration':
+            sortedList = durationSort(list, ascending)
+            break
+        case 'result':
+            sortedList = genericSort(list, type, ascending, initialOrder)
+            break
+        default:
+            sortedList = genericSort(list, type, ascending)
+            break
+        }
+        manager.setRender(sortedList)
+    }
+}
+
+const doSort = (type, skipDirection) => {
+    const newSortType = storageModule.getSort(manager.initialSort) !== type
+    const currentAsc = storageModule.getSortDirection()
+    let ascending
+    if (skipDirection) {
+        ascending = currentAsc
+    } else {
+        ascending = newSortType ? false : !currentAsc
+    }
+    storageModule.setSort(type)
+    storageModule.setSortDirection(ascending)
+
+    const list = manager.testSubset
+    const sortedList = type === 'duration' ? durationSort(list, ascending) : genericSort(list, type, ascending)
+    manager.setRender(sortedList)
+}
+
+module.exports = {
+    doInitSort,
+    doSort,
+}
+
+},{"./datamanager.js":1,"./storage.js":8}],8:[function(require,module,exports){
+const possibleFilters = [
+    'passed',
+    'skipped',
+    'failed',
+    'error',
+    'xfailed',
+    'xpassed',
+    'rerun',
+]
+
+const getVisible = () => {
+    const url = new URL(window.location.href)
+    const settings = new URLSearchParams(url.search).get('visible')
+    const lower = (item) => {
+        const lowerItem = item.toLowerCase()
+        if (possibleFilters.includes(lowerItem)) {
+            return lowerItem
+        }
+        return null
+    }
+    return settings === null ?
+        possibleFilters :
+        [...new Set(settings?.split(',').map(lower).filter((item) => item))]
+}
+
+const hideCategory = (categoryToHide) => {
+    const url = new URL(window.location.href)
+    const visibleParams = new URLSearchParams(url.search).get('visible')
+    const currentVisible = visibleParams ? visibleParams.split(',') : [...possibleFilters]
+    const settings = [...new Set(currentVisible)].filter((f) => f !== categoryToHide).join(',')
+
+    url.searchParams.set('visible', settings)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const showCategory = (categoryToShow) => {
+    if (typeof window === 'undefined') {
+        return
+    }
+    const url = new URL(window.location.href)
+    const currentVisible = new URLSearchParams(url.search).get('visible')?.split(',').filter(Boolean) ||
+        [...possibleFilters]
+    const settings = [...new Set([categoryToShow, ...currentVisible])]
+    const noFilter = possibleFilters.length === settings.length || !settings.length
+
+    noFilter ? url.searchParams.delete('visible') : url.searchParams.set('visible', settings.join(','))
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getSort = (initialSort) => {
+    const url = new URL(window.location.href)
+    let sort = new URLSearchParams(url.search).get('sort')
+    if (!sort) {
+        sort = initialSort || 'result'
+    }
+    return sort
+}
+
+const setSort = (type) => {
+    const url = new URL(window.location.href)
+    url.searchParams.set('sort', type)
+    window.history.pushState({}, null, unescape(url.href))
+}
+
+const getCollapsedCategory = (renderCollapsed) => {
+    let categories
+    if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href)
+        const collapsedItems = new URLSearchParams(url.search).get('collapsed')
+        switch (true) {
+        case !renderCollapsed && collapsedItems === null:
+            categories = ['passed']
+            break
+        case collapsedItems?.length === 0 || /^["']{2}$/.test(collapsedItems):
+            categories = []
+            break
+        case /^all$/.test(collapsedItems) || collapsedItems === null && /^all$/.test(renderCollapsed):
+            categories = [...possibleFilters]
+            break
+        default:
+            categories = collapsedItems?.split(',').map((item) => item.toLowerCase()) || renderCollapsed
+            break
+        }
+    } else {
+        categories = []
+    }
+    return categories
+}
+
+const getSortDirection = () => JSON.parse(sessionStorage.getItem('sortAsc')) || false
+const setSortDirection = (ascending) => sessionStorage.setItem('sortAsc', ascending)
+
+const getCollapsedIds = () => JSON.parse(sessionStorage.getItem('collapsedIds')) || []
+const setCollapsedIds = (list) => sessionStorage.setItem('collapsedIds', JSON.stringify(list))
+
+module.exports = {
+    getVisible,
+    hideCategory,
+    showCategory,
+    getCollapsedIds,
+    setCollapsedIds,
+    getSort,
+    setSort,
+    getSortDirection,
+    setSortDirection,
+    getCollapsedCategory,
+    possibleFilters,
+}
+
+},{}]},{},[4]);
+    </script>
+  </footer>
+</html><p></p><div><b>Status:</b> Test Run Complete: <b>1 test failed!</b> --- (<b><a href="latest_logs/">See latest logs for details</a></b>)</div><p></p>

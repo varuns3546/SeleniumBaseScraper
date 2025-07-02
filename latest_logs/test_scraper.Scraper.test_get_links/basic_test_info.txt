@@ -1,0 +1,16 @@
+test_scraper.py::Scraper::test_get_links
+--------------------------------------------------------------------
+Last Page: https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden/ref=zg_bs_pg_3_home-garden?_encoding=UTF8&pg=3
+ Duration: 23.16s
+  Browser: Chrome 138.0.7204.97
+   Driver: chromedriver 138.0.7204.92
+Timestamp: 1751485006  (Unix Timestamp)
+     Date: Wednesday, July 2, 2025
+     Time: 2:36:46 PM  (Central Daylight Time, UTC-05:00)
+--------------------------------------------------------------------
+Traceback:
+  File "C:\Users\station4\Downloads\SeleniumBaseScraper\test_scraper.py", line 71, in test_get_links
+    self.save_data(query_id, items)
+  File "C:\Users\station4\Downloads\SeleniumBaseScraper\test_scraper.py", line 78, in save_data
+    cursor.execute('''
+Exception: table items has no column named url

@@ -7,10 +7,11 @@ import sys
 import os
 import sqlite3 
 
+from UI.get_url_lists_page import Get_URL_Lists_Page
 def run_scraper(title):
     conn = sqlite3.connect('queries.db')
     cursor = conn.cursor()
-    cursor.execute("SELECT id FROM get_url_list_queries WHERE title = ?", (title,))
+    cursor.execute("SELECT id FROM queries WHERE title = ?", (title,))
     #query id is first item in tuple from cursor.fetchone()
     query_id = str(cursor.fetchone()[0])
 
@@ -18,7 +19,7 @@ def run_scraper(title):
 
     try:
         subprocess.run(
-            [sys.executable, "-m", "pytest", "-s", "scraper.py"],
+            [sys.executable, "-m", "pytest", "-s", "test_scraper.py"],
             check=True,
             env={**os.environ,
                  "QUERY_ID": query_id
@@ -58,6 +59,7 @@ def save_query():
     pagination = selected_pagination.get().lower()
     scroll_rate = scroll_entry.get()
     pag_btn_selector = pag_btn_selector_entry.get() 
+
     conn = sqlite3.connect('queries.db')
     cursor = conn.cursor()
     cursor.execute("SELECT id FROM get_url_list_queries WHERE title = ?", (title,))
@@ -79,6 +81,55 @@ def save_query():
     conn.commit()
     conn.close()
 
+    global saved_queries
+    saved_queries = load_queries()
+    query_options = ["New Query"] + [q['title'] for q in saved_queries]
+        
+    # Rebuild the dropdown menu
+    menu = query_dropdown["menu"]
+    menu.delete(0, "end")
+    for option in query_options:
+        menu.add_command(label=option, command=lambda value=option: (selected_query.set(value), on_query_selected()))
+
+    selected_query.set(title)
+    on_query_selected()
+
+def delete_query():
+    selected_title = selected_query.get()
+
+    if selected_title == "No saved queries":
+        messagebox.showwarning("Warning", "No query selected to delete.")
+        return
+
+    confirm = messagebox.askyesno("Confirm Delete", f"Are you sure you want to delete '{selected_title}'?")
+    if not confirm:
+        return
+
+    conn = sqlite3.connect('queries.db')
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM get_url_list_queries WHERE title = ?", (selected_title,))
+    conn.commit()
+    conn.close()
+    
+    global saved_queries
+    saved_queries = load_queries()
+    query_options = None
+    if saved_queries:
+        query_options = ["New Query"] + [q['title'] for q in saved_queries]
+    else:
+        query_options = ["New Query"]    
+    
+    selected_query.set(query_options[0])
+
+    on_query_selected()  # <-- Manually trigger the callback
+
+    # Rebuild the dropdown menu
+    menu = query_dropdown["menu"]
+    menu.delete(0, "end")
+    for option in query_options:
+        menu.add_command(label=option, command=lambda value=option: (selected_query.set(value), on_query_selected()))
+
+
 def load_queries():
     conn = sqlite3.connect('queries.db')
     cursor = conn.cursor()
@@ -94,29 +145,39 @@ def load_queries():
 
 def on_query_selected(event=None):
     selected_title = selected_query.get()
-    for query in saved_queries:
-        if query['title'] == selected_title:
-            title_entry.delete(0, tk.END)
-            title_entry.insert(0, query['title'])
 
-            url_entry.delete(0, tk.END)
-            url_entry.insert(0, query['url_template'])
+    if selected_title == "New Query":
+        clear_fields()
+    else:
+        for query in saved_queries:
+            if query['title'] == selected_title:
+                clear_fields()
+                title_entry.insert(0, query['title'])
+                url_entry.insert(0, query['url_template'])
+                sleep_entry.insert(0, query['sleep_time'])
+                item_selector_entry.insert(0, query['item_selector'])
+                pagination_dropdown.setvar(query["pagination"])
+                scroll_entry.insert(0, query['scroll_rate'])
+                pag_btn_selector_entry.insert(0, query['pagination_button_selector'])
+                break
 
-            sleep_entry.delete(0, tk.END)
-            sleep_entry.insert(0, query['sleep_time'])
+def clear_fields():
+    title_entry.delete(0, tk.END)
+    url_entry.delete(0, tk.END)
+    sleep_entry.delete(0, tk.END)
+    item_selector_entry.delete(0, tk.END)
+    scroll_entry.delete(0, tk.END)
+    pag_btn_selector_entry.delete(0, tk.END)
+    pagination_dropdown.setvar(selected_pagination._name, pagination_options[0])
 
-            item_selector_entry.delete(0, tk.END)
-            item_selector_entry.insert(0, query['item_selector'])
-            
-            pagination_dropdown.setvar(query["pagination"])
-           
-            scroll_entry.delete(0, tk.END)
-            scroll_entry.insert(0, query['scroll_rate'])
 
-            pag_btn_selector_entry.delete(0, tk.END)
-            pag_btn_selector_entry.insert(0, query['pagination_button_selector'])
-
-            break
+handlers = {
+    "on_query_selected": on_query_selected,
+    "on_start": on_start,
+    "save_query": save_query,
+    "delete_query": delete_query,
+    "load_queries": load_queries
+}
 
 # --- GUI ---
 root = tk.Tk()
@@ -125,58 +186,22 @@ root.geometry("1000x400")
 notebook = ttk.Notebook(root)
 notebook.pack(fill="both", expand=True)
 
-url_list_tab = ttk.Frame(notebook)
-notebook.add(url_list_tab, text="Get URL List")
+get_url_lists_page = Get_URL_Lists_Page(notebook, handlers)
 
-query_dropdown_label = tk.Label(url_list_tab, text="Load Saved Query")
-title_label = tk.Label(url_list_tab, text="Query Title")
-url_label = tk.Label(url_list_tab, text="URL Template (with * for pagination):")
-sleep_label = tk.Label(url_list_tab, text="Sleep Time")
-item_selector_label = tk.Label(url_list_tab, text="Item Selector")
-pagination_label = tk.Label(url_list_tab, text="Select Pagination")
-scroll_label = tk.Label(url_list_tab, text="Scroll Rate")
-pag_btn_selector_label = tk.Label(url_list_tab, text="Button Pagination Selector")
+title_entry = get_url_lists_page.title_entry
+url_entry = get_url_lists_page.url_entry
+sleep_entry = get_url_lists_page.sleep_entry
+item_selector_entry = get_url_lists_page.item_selector_entry
+scroll_entry = get_url_lists_page.scroll_entry
+pag_btn_selector_label = get_url_lists_page.pag_btn_selector_label
+pag_btn_selector_entry = get_url_lists_page.pag_btn_selector_entry
+pagination_options = get_url_lists_page.pagination_options
+pagination_dropdown = get_url_lists_page.pagination_dropdown
+selected_pagination = get_url_lists_page.selected_pagination
+query_dropdown = get_url_lists_page.query_dropdown
+selected_query = get_url_lists_page.selected_query
+saved_queries = get_url_lists_page.saved_queries
 
-saved_queries = load_queries()
-query_options = [q['title'] for q in saved_queries] if saved_queries else ["No saved queries"]
-
-selected_query = tk.StringVar(value=query_options[0])
-query_dropdown = ttk.OptionMenu(url_list_tab, selected_query, query_options[0], *query_options, command=on_query_selected)
-
-title_entry = tk.Entry(url_list_tab, width=80)
-url_entry = tk.Entry(url_list_tab, width=150)
-sleep_entry = tk.Entry(url_list_tab, width=80)
-item_selector_entry =tk.Entry(url_list_tab, width=80)
-pagination_options = ["URL", "Button", "Vertical Scroll", "Horizontal Scroll"]
-selected_pagination = tk.StringVar(value=pagination_options[0])
-pagination_dropdown = ttk.OptionMenu(url_list_tab, selected_pagination, pagination_options[0], *pagination_options)
-scroll_entry=tk.Entry(url_list_tab, width=80)
-pag_btn_selector_entry = tk.Entry(url_list_tab, width=80)
-start_btn = tk.Button(url_list_tab, text="Start Scraper", command=on_start, font=("Arial", 12))
-save_btn = tk.Button(url_list_tab, text="Save Query", command=save_query, font=("Arial", 12))
-
-query_dropdown_label.grid(row=0, column=0)
-title_label.grid(row=1, column=0)
-url_label.grid(row=2, column=0)
-sleep_label.grid(row=3, column=0)
-item_selector_label.grid(row=4, column=0)
-pagination_label.grid(row=5, column=0)
-scroll_label.grid(row=6, column=0)
-pag_btn_selector_label.grid(row=7, column=0)
-
-query_dropdown.grid(row=0, column=1, sticky="w")
-title_entry.grid(row=1, column=1, sticky="w")
-url_entry.grid(row=2, column=1, sticky="w")
-sleep_entry.grid(row=3, column=1, sticky="w")
-item_selector_entry.grid(row=4, column=1, sticky="w")
-pagination_dropdown.grid(row=5, column=1, sticky='w')
-scroll_entry.grid(row=6, column=1, sticky='w')
-pag_btn_selector_entry.grid(row=7, column=1, sticky='w')
-
-
-start_btn.grid(row=9, column=0)
-save_btn.grid(row=9, column=1)
-
-
+notebook.add(get_url_lists_page.page, text="Get URL Lists")
 
 root.mainloop()
