@@ -1,0 +1,18 @@
+test_scrape_urls.py::Scraper::test_scrape_urls
+--------------------------------------------------------------------
+Last Page: [WARNING! Browser Not Open!]
+ Duration: 379.47s
+  Browser: Chrome 138.0.7204.97
+   Driver: chromedriver 138.0.7204.92
+Timestamp: 1751566872  (Unix Timestamp)
+     Date: Thursday, July 3, 2025
+     Time: 1:21:12 PM  (Central Daylight Time, UTC-05:00)
+--------------------------------------------------------------------
+Traceback:
+  File "C:\Users\station4\Downloads\SeleniumBaseScraper\test_scrape_urls.py", line 14, in test_scrape_urls
+    self.open(item['url'])
+  File "c:\Users\station4\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 231, in open
+    self._check_browser()
+  File "c:\Users\station4\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 9312, in _check_browser
+    raise NoSuchWindowException("Active window was already closed!")
+Exception: Message: Active window was already closed!

@@ -75,7 +75,7 @@ for field_name, field_type in fields:
 parameters = {
     "title": "Amazon Home and Kitchen Best Sellers",
     "url": "https://www.amazon.com/Best-Sellers-Home-Kitchen/zgbs/home-garden/ref=zg_bs_pg_*_home-garden?_encoding=UTF8&pg=*",
-    "sleep_time": ".75",
+    "sleep_time": "0",
     "item_selector": 'a.a-link-normal.aok-block[role="link"]:not(.a-text-normal)',
     "pagination": "url",
     "scroll_rate": "",
