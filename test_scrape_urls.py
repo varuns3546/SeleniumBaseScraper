@@ -1,6 +1,6 @@
 import os
 from seleniumbase import BaseCase
-from pymongo import MongoClient
+from pymongo import MongoClient, UpdateOne
 
 class Scraper(BaseCase):
     def test_scrape_urls(self):
@@ -9,8 +9,11 @@ class Scraper(BaseCase):
         items_collection = db["items"]
         selectors = list(db["selectors"].find())
     
+        bulk_updates = []
 
-        for item in items_collection.find():
+
+
+        for index, item in enumerate(items_collection.find(), 1):
             self.open(item['url'])
 
             updates = {}
@@ -24,13 +27,19 @@ class Scraper(BaseCase):
                         print(text)
                         updates[title] = text
                     except Exception as e:
-                        updates[title] = None  # or log the error
                         print(f"Error extracting '{title}' using selector '{selector}': {e}")
                 
-            items_collection.update_one(
-                {"_id": item["_id"]},
-                {"$set": updates}
+            bulk_updates.append(
+                UpdateOne({"_id": item["_id"]}, {"$set": updates})
             )
-                
+
+            if len(bulk_updates) == 10:
+                items_collection.bulk_write(bulk_updates)
+                print("Updated 10 documents")
+                bulk_updates = []
+
+        if bulk_updates:
+            items_collection.bulk_write(bulk_updates)
+            print(f"Updated remaining {len(bulk_updates)} documents")
 
         
