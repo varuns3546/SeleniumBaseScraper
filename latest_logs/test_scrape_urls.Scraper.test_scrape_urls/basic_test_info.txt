@@ -1,18 +1,20 @@
-test_scrape_urls.py::Scraper::test_scrape_urls
+tests/test_scrape_urls.py::Scraper::test_scrape_urls
 --------------------------------------------------------------------
 Last Page: [WARNING! Browser Not Open!]
- Duration: 121.87s
-  Browser: Chrome 138.0.7204.97
-   Driver: chromedriver 138.0.7204.92
-Timestamp: 1751571710  (Unix Timestamp)
-     Date: Thursday, July 3, 2025
-     Time: 2:41:50 PM  (Central Daylight Time, UTC-05:00)
+ Duration: 26.04s
+  Browser: Chrome 137.0.7151.122
+   Driver: chromedriver 137.0.7151.119
+Timestamp: 1751742285  (Unix Timestamp)
+     Date: Saturday, July 5, 2025
+     Time: 2:04:45 PM  (Central Daylight Time, UTC-05:00)
 --------------------------------------------------------------------
 Traceback:
-  File "C:\Users\station4\Downloads\SeleniumBaseScraper\test_scrape_urls.py", line 17, in test_scrape_urls
+  File "C:\Users\station3\Downloads\SeleniumBaseScraper\tests\test_scrape_urls.py", line 33, in test_scrape_urls
     self.open(item['url'])
-  File "c:\Users\station4\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 231, in open
+    ~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\station3\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 231, in open
     self._check_browser()
-  File "c:\Users\station4\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 9312, in _check_browser
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\station3\Downloads\SeleniumBaseScraper\venv\Lib\site-packages\seleniumbase\fixtures\base_case.py", line 9468, in _check_browser
     raise NoSuchWindowException("Active window was already closed!")
 Exception: Message: Active window was already closed!
